@@ -34,7 +34,7 @@ npm run build:geo
 | Visual: cities | ✅ | `src/lib/osm.ts` + `getFeatureAsync()` in `geo.ts` | — |
 | Long-tail (anything not in `places.json`) | ✅ | `src/lib/wikidata.ts` + `[place]/page.tsx` | — |
 | OG image / share card | ✅ | `src/app/[place]/opengraph-image.tsx` + `ShareButton` | — |
-| Deployed to Vercel | 🟡 not yet | — | **Task 05** |
+| Deployed to Vercel | ✅ | Vercel (auto-deploy from GitHub) | — |
 
 Legend: ✅ done · 🟢 wired but needs validation · 🟡 stubbed · 🔴 broken (not currently any).
 

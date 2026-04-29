@@ -10,6 +10,7 @@
     "build:geo": "node scripts/build-geo.mjs"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "d3-geo": "^3.1.1",
     "next": "15.0.3",
     "react": "18.3.1",
