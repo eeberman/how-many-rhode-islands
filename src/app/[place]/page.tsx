@@ -8,6 +8,7 @@ import {
   type Place,
 } from "@/lib/places";
 import { fetchPlaceFromWikidata } from "@/lib/wikidata";
+import { getFeatureAsync, getRhodeIslandFeature } from "@/lib/geo";
 import ScaleCompare from "@/components/ScaleCompare";
 
 interface PageProps {
@@ -54,6 +55,9 @@ export default async function PlacePage({ params }: PageProps) {
   const { place: slug } = await params;
   const place = await resolvePlace(slug);
   if (!place) notFound();
+
+  const searchedFeature = await getFeatureAsync(place);
+  const riFeature = getRhodeIslandFeature();
 
   const isBigger = place.ri_ratio >= 1;
   const ratio = isBigger
@@ -104,7 +108,7 @@ export default async function PlacePage({ params }: PageProps) {
         </div>
 
         {/* Visual */}
-        <ScaleCompare place={place} />
+        <ScaleCompare place={place} searchedFeature={searchedFeature} riFeature={riFeature} />
 
         {/* Stats */}
         <div className="mt-10 text-center text-sm text-bone/50 space-y-1">

@@ -31,7 +31,7 @@ npm run build:geo
 | Visual: countries (real outlines) | ✅ | `data/geo/countries.json` | — |
 | Visual: US states (real outlines) | ✅ | `data/geo/us-states.json` | — |
 | Visual: national parks | ✅ | `data/geo/national-parks.json` | — |
-| Visual: cities | 🟡 placeholder rectangle | `ScaleCompare` falls back | **Task 03** |
+| Visual: cities | ✅ | `src/lib/osm.ts` + `getFeatureAsync()` in `geo.ts` | — |
 | Long-tail (anything not in `places.json`) | ✅ | `src/lib/wikidata.ts` + `[place]/page.tsx` | — |
 | OG image / share card | 🟡 default Next.js metadata | `[place]/page.tsx` `generateMetadata()` | **Task 04** |
 | Deployed to Vercel | 🟡 not yet | — | **Task 05** |

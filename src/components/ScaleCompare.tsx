@@ -13,8 +13,8 @@
  *   - Smaller shape is projected the same way, then transformed (scale + translate)
  *     so it sits centered inside the bigger shape at its true relative size.
  *
- * Falls back to a placeholder rounded square for places without bundled GeoJSON
- * (cities, national parks, and a few tiny island nations like Tuvalu). The math
+ * Falls back to a placeholder rounded square for places without GeoJSON
+ * (some cities, and a few tiny island nations like Tuvalu). The math
  * and layout are identical — only the path shapes differ.
  */
 
@@ -23,11 +23,7 @@ import {
   RI_AREA_SQ_MI,
   type Place,
 } from "@/lib/places";
-import {
-  getFeature,
-  getRhodeIslandFeature,
-  projectToBox,
-} from "@/lib/geo";
+import { projectToBox } from "@/lib/geo";
 
 const VIEWBOX = 400;
 const PADDING = 20;
@@ -40,12 +36,11 @@ const COLOR_OCEAN_BRIGHT = "#00B4D8";
 
 interface Props {
   place: Place;
+  searchedFeature: Feature<Geometry, { name: string }> | null;
+  riFeature: Feature<Geometry, { name: string }>;
 }
 
-export default function ScaleCompare({ place }: Props) {
-  const searchedFeature = getFeature(place.type, place.geojson_key ?? null);
-  const riFeature = getRhodeIslandFeature();
-
+export default function ScaleCompare({ place, searchedFeature, riFeature }: Props) {
   const searchedIsBigger = place.area_sq_mi >= RI_AREA_SQ_MI;
   const linearRatio = Math.sqrt(
     searchedIsBigger
