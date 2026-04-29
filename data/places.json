@@ -1,0 +1,3385 @@
+[
+  {
+    "name": "Russia",
+    "slug": "russia",
+    "type": "country",
+    "area_sq_mi": 6612100,
+    "ri_ratio": 5446.54,
+    "geojson_key": "643"
+  },
+  {
+    "name": "Canada",
+    "slug": "canada",
+    "type": "country",
+    "area_sq_mi": 3855100,
+    "ri_ratio": 3175.54,
+    "geojson_key": "124"
+  },
+  {
+    "name": "United States",
+    "slug": "united-states",
+    "type": "country",
+    "area_sq_mi": 3796742,
+    "ri_ratio": 3127.46,
+    "geojson_key": "840"
+  },
+  {
+    "name": "China",
+    "slug": "china",
+    "type": "country",
+    "area_sq_mi": 3705407,
+    "ri_ratio": 3052.23,
+    "geojson_key": "156"
+  },
+  {
+    "name": "Brazil",
+    "slug": "brazil",
+    "type": "country",
+    "area_sq_mi": 3287956,
+    "ri_ratio": 2708.37,
+    "geojson_key": "076"
+  },
+  {
+    "name": "Australia",
+    "slug": "australia",
+    "type": "country",
+    "area_sq_mi": 2969907,
+    "ri_ratio": 2446.38,
+    "geojson_key": "036"
+  },
+  {
+    "name": "India",
+    "slug": "india",
+    "type": "country",
+    "area_sq_mi": 1269219,
+    "ri_ratio": 1045.49,
+    "geojson_key": "356"
+  },
+  {
+    "name": "Argentina",
+    "slug": "argentina",
+    "type": "country",
+    "area_sq_mi": 1073500,
+    "ri_ratio": 884.27,
+    "geojson_key": "032"
+  },
+  {
+    "name": "Kazakhstan",
+    "slug": "kazakhstan",
+    "type": "country",
+    "area_sq_mi": 1052090,
+    "ri_ratio": 866.63,
+    "geojson_key": "398"
+  },
+  {
+    "name": "Algeria",
+    "slug": "algeria",
+    "type": "country",
+    "area_sq_mi": 919595,
+    "ri_ratio": 757.49,
+    "geojson_key": "012"
+  },
+  {
+    "name": "Democratic Republic of Congo",
+    "slug": "democratic-republic-of-congo",
+    "type": "country",
+    "area_sq_mi": 905354,
+    "ri_ratio": 745.76,
+    "geojson_key": "180"
+  },
+  {
+    "name": "Saudi Arabia",
+    "slug": "saudi-arabia",
+    "type": "country",
+    "area_sq_mi": 830000,
+    "ri_ratio": 683.69,
+    "geojson_key": "682"
+  },
+  {
+    "name": "Mexico",
+    "slug": "mexico",
+    "type": "country",
+    "area_sq_mi": 761606,
+    "ri_ratio": 627.35,
+    "geojson_key": "484"
+  },
+  {
+    "name": "Indonesia",
+    "slug": "indonesia",
+    "type": "country",
+    "area_sq_mi": 735358,
+    "ri_ratio": 605.73,
+    "geojson_key": "360"
+  },
+  {
+    "name": "Sudan",
+    "slug": "sudan",
+    "type": "country",
+    "area_sq_mi": 728215,
+    "ri_ratio": 599.85,
+    "geojson_key": "729"
+  },
+  {
+    "name": "Libya",
+    "slug": "libya",
+    "type": "country",
+    "area_sq_mi": 679362,
+    "ri_ratio": 559.61,
+    "geojson_key": "434"
+  },
+  {
+    "name": "Iran",
+    "slug": "iran",
+    "type": "country",
+    "area_sq_mi": 636372,
+    "ri_ratio": 524.19,
+    "geojson_key": "364"
+  },
+  {
+    "name": "Mongolia",
+    "slug": "mongolia",
+    "type": "country",
+    "area_sq_mi": 603909,
+    "ri_ratio": 497.45,
+    "geojson_key": "496"
+  },
+  {
+    "name": "Peru",
+    "slug": "peru",
+    "type": "country",
+    "area_sq_mi": 496225,
+    "ri_ratio": 408.75,
+    "geojson_key": "604"
+  },
+  {
+    "name": "Chad",
+    "slug": "chad",
+    "type": "country",
+    "area_sq_mi": 495755,
+    "ri_ratio": 408.36,
+    "geojson_key": "148"
+  },
+  {
+    "name": "Niger",
+    "slug": "niger",
+    "type": "country",
+    "area_sq_mi": 489191,
+    "ri_ratio": 402.96,
+    "geojson_key": "562"
+  },
+  {
+    "name": "Angola",
+    "slug": "angola",
+    "type": "country",
+    "area_sq_mi": 481354,
+    "ri_ratio": 396.5,
+    "geojson_key": "024"
+  },
+  {
+    "name": "Mali",
+    "slug": "mali",
+    "type": "country",
+    "area_sq_mi": 478841,
+    "ri_ratio": 394.43,
+    "geojson_key": "466"
+  },
+  {
+    "name": "South Africa",
+    "slug": "south-africa",
+    "type": "country",
+    "area_sq_mi": 471445,
+    "ri_ratio": 388.34,
+    "geojson_key": "710"
+  },
+  {
+    "name": "Colombia",
+    "slug": "colombia",
+    "type": "country",
+    "area_sq_mi": 440831,
+    "ri_ratio": 363.12,
+    "geojson_key": "170"
+  },
+  {
+    "name": "Ethiopia",
+    "slug": "ethiopia",
+    "type": "country",
+    "area_sq_mi": 426373,
+    "ri_ratio": 351.21,
+    "geojson_key": "231"
+  },
+  {
+    "name": "Bolivia",
+    "slug": "bolivia",
+    "type": "country",
+    "area_sq_mi": 424165,
+    "ri_ratio": 349.39,
+    "geojson_key": "068"
+  },
+  {
+    "name": "Mauritania",
+    "slug": "mauritania",
+    "type": "country",
+    "area_sq_mi": 397955,
+    "ri_ratio": 327.8,
+    "geojson_key": "478"
+  },
+  {
+    "name": "Egypt",
+    "slug": "egypt",
+    "type": "country",
+    "area_sq_mi": 387048,
+    "ri_ratio": 318.82,
+    "geojson_key": "818"
+  },
+  {
+    "name": "Tanzania",
+    "slug": "tanzania",
+    "type": "country",
+    "area_sq_mi": 364900,
+    "ri_ratio": 300.58,
+    "geojson_key": "834"
+  },
+  {
+    "name": "Nigeria",
+    "slug": "nigeria",
+    "type": "country",
+    "area_sq_mi": 356669,
+    "ri_ratio": 293.8,
+    "geojson_key": "566"
+  },
+  {
+    "name": "Venezuela",
+    "slug": "venezuela",
+    "type": "country",
+    "area_sq_mi": 353841,
+    "ri_ratio": 291.47,
+    "geojson_key": "862"
+  },
+  {
+    "name": "Pakistan",
+    "slug": "pakistan",
+    "type": "country",
+    "area_sq_mi": 340509,
+    "ri_ratio": 280.49,
+    "geojson_key": "586"
+  },
+  {
+    "name": "Namibia",
+    "slug": "namibia",
+    "type": "country",
+    "area_sq_mi": 318261,
+    "ri_ratio": 262.16,
+    "geojson_key": "516"
+  },
+  {
+    "name": "Mozambique",
+    "slug": "mozambique",
+    "type": "country",
+    "area_sq_mi": 309496,
+    "ri_ratio": 254.94,
+    "geojson_key": "508"
+  },
+  {
+    "name": "Turkey",
+    "slug": "turkey",
+    "type": "country",
+    "area_sq_mi": 302535,
+    "ri_ratio": 249.21,
+    "geojson_key": "792"
+  },
+  {
+    "name": "Chile",
+    "slug": "chile",
+    "type": "country",
+    "area_sq_mi": 291930,
+    "ri_ratio": 240.47,
+    "geojson_key": "152"
+  },
+  {
+    "name": "Zambia",
+    "slug": "zambia",
+    "type": "country",
+    "area_sq_mi": 290587,
+    "ri_ratio": 239.36,
+    "geojson_key": "894"
+  },
+  {
+    "name": "Myanmar",
+    "slug": "myanmar",
+    "type": "country",
+    "area_sq_mi": 261228,
+    "ri_ratio": 215.18,
+    "geojson_key": "104"
+  },
+  {
+    "name": "Afghanistan",
+    "slug": "afghanistan",
+    "type": "country",
+    "area_sq_mi": 251827,
+    "ri_ratio": 207.44,
+    "geojson_key": "004"
+  },
+  {
+    "name": "South Sudan",
+    "slug": "south-sudan",
+    "type": "country",
+    "area_sq_mi": 248777,
+    "ri_ratio": 204.92,
+    "geojson_key": "728"
+  },
+  {
+    "name": "France",
+    "slug": "france",
+    "type": "country",
+    "area_sq_mi": 248573,
+    "ri_ratio": 204.76,
+    "geojson_key": "250"
+  },
+  {
+    "name": "Somalia",
+    "slug": "somalia",
+    "type": "country",
+    "area_sq_mi": 246201,
+    "ri_ratio": 202.8,
+    "geojson_key": "706"
+  },
+  {
+    "name": "Central African Republic",
+    "slug": "central-african-republic",
+    "type": "country",
+    "area_sq_mi": 240535,
+    "ri_ratio": 198.13,
+    "geojson_key": "140"
+  },
+  {
+    "name": "Ukraine",
+    "slug": "ukraine",
+    "type": "country",
+    "area_sq_mi": 233062,
+    "ri_ratio": 191.98,
+    "geojson_key": "804"
+  },
+  {
+    "name": "Madagascar",
+    "slug": "madagascar",
+    "type": "country",
+    "area_sq_mi": 226658,
+    "ri_ratio": 186.7,
+    "geojson_key": "450"
+  },
+  {
+    "name": "Botswana",
+    "slug": "botswana",
+    "type": "country",
+    "area_sq_mi": 224607,
+    "ri_ratio": 185.01,
+    "geojson_key": "072"
+  },
+  {
+    "name": "Kenya",
+    "slug": "kenya",
+    "type": "country",
+    "area_sq_mi": 224081,
+    "ri_ratio": 184.58,
+    "geojson_key": "404"
+  },
+  {
+    "name": "Yemen",
+    "slug": "yemen",
+    "type": "country",
+    "area_sq_mi": 203850,
+    "ri_ratio": 167.92,
+    "geojson_key": "887"
+  },
+  {
+    "name": "Thailand",
+    "slug": "thailand",
+    "type": "country",
+    "area_sq_mi": 198115,
+    "ri_ratio": 163.19,
+    "geojson_key": "764"
+  },
+  {
+    "name": "Spain",
+    "slug": "spain",
+    "type": "country",
+    "area_sq_mi": 195360,
+    "ri_ratio": 160.92,
+    "geojson_key": "724"
+  },
+  {
+    "name": "Turkmenistan",
+    "slug": "turkmenistan",
+    "type": "country",
+    "area_sq_mi": 188456,
+    "ri_ratio": 155.24,
+    "geojson_key": "795"
+  },
+  {
+    "name": "Cameroon",
+    "slug": "cameroon",
+    "type": "country",
+    "area_sq_mi": 183568,
+    "ri_ratio": 151.21,
+    "geojson_key": "120"
+  },
+  {
+    "name": "Papua New Guinea",
+    "slug": "papua-new-guinea",
+    "type": "country",
+    "area_sq_mi": 178704,
+    "ri_ratio": 147.2,
+    "geojson_key": "598"
+  },
+  {
+    "name": "Sweden",
+    "slug": "sweden",
+    "type": "country",
+    "area_sq_mi": 173860,
+    "ri_ratio": 143.21,
+    "geojson_key": "752"
+  },
+  {
+    "name": "Uzbekistan",
+    "slug": "uzbekistan",
+    "type": "country",
+    "area_sq_mi": 172742,
+    "ri_ratio": 142.29,
+    "geojson_key": "860"
+  },
+  {
+    "name": "Morocco",
+    "slug": "morocco",
+    "type": "country",
+    "area_sq_mi": 172414,
+    "ri_ratio": 142.02,
+    "geojson_key": "504"
+  },
+  {
+    "name": "Iraq",
+    "slug": "iraq",
+    "type": "country",
+    "area_sq_mi": 169235,
+    "ri_ratio": 139.4,
+    "geojson_key": "368"
+  },
+  {
+    "name": "Paraguay",
+    "slug": "paraguay",
+    "type": "country",
+    "area_sq_mi": 157048,
+    "ri_ratio": 129.36,
+    "geojson_key": "600"
+  },
+  {
+    "name": "Zimbabwe",
+    "slug": "zimbabwe",
+    "type": "country",
+    "area_sq_mi": 150872,
+    "ri_ratio": 124.28,
+    "geojson_key": "716"
+  },
+  {
+    "name": "Japan",
+    "slug": "japan",
+    "type": "country",
+    "area_sq_mi": 145937,
+    "ri_ratio": 120.21,
+    "geojson_key": "392"
+  },
+  {
+    "name": "Germany",
+    "slug": "germany",
+    "type": "country",
+    "area_sq_mi": 137988,
+    "ri_ratio": 113.66,
+    "geojson_key": "276"
+  },
+  {
+    "name": "Congo",
+    "slug": "congo",
+    "type": "country",
+    "area_sq_mi": 132047,
+    "ri_ratio": 108.77,
+    "geojson_key": "178"
+  },
+  {
+    "name": "Finland",
+    "slug": "finland",
+    "type": "country",
+    "area_sq_mi": 130559,
+    "ri_ratio": 107.54,
+    "geojson_key": "246"
+  },
+  {
+    "name": "Vietnam",
+    "slug": "vietnam",
+    "type": "country",
+    "area_sq_mi": 127882,
+    "ri_ratio": 105.34,
+    "geojson_key": "704"
+  },
+  {
+    "name": "Malaysia",
+    "slug": "malaysia",
+    "type": "country",
+    "area_sq_mi": 127355,
+    "ri_ratio": 104.91,
+    "geojson_key": "458"
+  },
+  {
+    "name": "Norway",
+    "slug": "norway",
+    "type": "country",
+    "area_sq_mi": 125021,
+    "ri_ratio": 102.98,
+    "geojson_key": "578"
+  },
+  {
+    "name": "Ivory Coast",
+    "slug": "ivory-coast",
+    "type": "country",
+    "area_sq_mi": 124504,
+    "ri_ratio": 102.56,
+    "geojson_key": "384"
+  },
+  {
+    "name": "Poland",
+    "slug": "poland",
+    "type": "country",
+    "area_sq_mi": 120728,
+    "ri_ratio": 99.45,
+    "geojson_key": "616"
+  },
+  {
+    "name": "Oman",
+    "slug": "oman",
+    "type": "country",
+    "area_sq_mi": 119500,
+    "ri_ratio": 98.43,
+    "geojson_key": "512"
+  },
+  {
+    "name": "Italy",
+    "slug": "italy",
+    "type": "country",
+    "area_sq_mi": 116348,
+    "ri_ratio": 95.84,
+    "geojson_key": "380"
+  },
+  {
+    "name": "Philippines",
+    "slug": "philippines",
+    "type": "country",
+    "area_sq_mi": 115831,
+    "ri_ratio": 95.41,
+    "geojson_key": "608"
+  },
+  {
+    "name": "Ecuador",
+    "slug": "ecuador",
+    "type": "country",
+    "area_sq_mi": 109484,
+    "ri_ratio": 90.18,
+    "geojson_key": "218"
+  },
+  {
+    "name": "Burkina Faso",
+    "slug": "burkina-faso",
+    "type": "country",
+    "area_sq_mi": 105869,
+    "ri_ratio": 87.21,
+    "geojson_key": "854"
+  },
+  {
+    "name": "New Zealand",
+    "slug": "new-zealand",
+    "type": "country",
+    "area_sq_mi": 103483,
+    "ri_ratio": 85.24,
+    "geojson_key": "554"
+  },
+  {
+    "name": "Gabon",
+    "slug": "gabon",
+    "type": "country",
+    "area_sq_mi": 103347,
+    "ri_ratio": 85.13,
+    "geojson_key": "266"
+  },
+  {
+    "name": "Western Sahara",
+    "slug": "western-sahara",
+    "type": "country",
+    "area_sq_mi": 97344,
+    "ri_ratio": 80.18,
+    "geojson_key": "732"
+  },
+  {
+    "name": "Guinea",
+    "slug": "guinea",
+    "type": "country",
+    "area_sq_mi": 94926,
+    "ri_ratio": 78.19,
+    "geojson_key": "324"
+  },
+  {
+    "name": "United Kingdom",
+    "slug": "united-kingdom",
+    "type": "country",
+    "area_sq_mi": 94058,
+    "ri_ratio": 77.48,
+    "geojson_key": "826"
+  },
+  {
+    "name": "Uganda",
+    "slug": "uganda",
+    "type": "country",
+    "area_sq_mi": 93065,
+    "ri_ratio": 76.66,
+    "geojson_key": "800"
+  },
+  {
+    "name": "Ghana",
+    "slug": "ghana",
+    "type": "country",
+    "area_sq_mi": 92098,
+    "ri_ratio": 75.86,
+    "geojson_key": "288"
+  },
+  {
+    "name": "Romania",
+    "slug": "romania",
+    "type": "country",
+    "area_sq_mi": 91699,
+    "ri_ratio": 75.53,
+    "geojson_key": "642"
+  },
+  {
+    "name": "Laos",
+    "slug": "laos",
+    "type": "country",
+    "area_sq_mi": 91429,
+    "ri_ratio": 75.31,
+    "geojson_key": "418"
+  },
+  {
+    "name": "Guyana",
+    "slug": "guyana",
+    "type": "country",
+    "area_sq_mi": 83000,
+    "ri_ratio": 68.37,
+    "geojson_key": "328"
+  },
+  {
+    "name": "Belarus",
+    "slug": "belarus",
+    "type": "country",
+    "area_sq_mi": 80155,
+    "ri_ratio": 66.03,
+    "geojson_key": "112"
+  },
+  {
+    "name": "Kyrgyzstan",
+    "slug": "kyrgyzstan",
+    "type": "country",
+    "area_sq_mi": 77182,
+    "ri_ratio": 63.58,
+    "geojson_key": "417"
+  },
+  {
+    "name": "Senegal",
+    "slug": "senegal",
+    "type": "country",
+    "area_sq_mi": 75955,
+    "ri_ratio": 62.57,
+    "geojson_key": "686"
+  },
+  {
+    "name": "Syria",
+    "slug": "syria",
+    "type": "country",
+    "area_sq_mi": 71498,
+    "ri_ratio": 58.89,
+    "geojson_key": "760"
+  },
+  {
+    "name": "Cambodia",
+    "slug": "cambodia",
+    "type": "country",
+    "area_sq_mi": 69898,
+    "ri_ratio": 57.58,
+    "geojson_key": "116"
+  },
+  {
+    "name": "Uruguay",
+    "slug": "uruguay",
+    "type": "country",
+    "area_sq_mi": 68037,
+    "ri_ratio": 56.04,
+    "geojson_key": "858"
+  },
+  {
+    "name": "Suriname",
+    "slug": "suriname",
+    "type": "country",
+    "area_sq_mi": 63251,
+    "ri_ratio": 52.1,
+    "geojson_key": "740"
+  },
+  {
+    "name": "Tunisia",
+    "slug": "tunisia",
+    "type": "country",
+    "area_sq_mi": 63170,
+    "ri_ratio": 52.03,
+    "geojson_key": "788"
+  },
+  {
+    "name": "Bangladesh",
+    "slug": "bangladesh",
+    "type": "country",
+    "area_sq_mi": 56977,
+    "ri_ratio": 46.93,
+    "geojson_key": "050"
+  },
+  {
+    "name": "Nepal",
+    "slug": "nepal",
+    "type": "country",
+    "area_sq_mi": 56827,
+    "ri_ratio": 46.81,
+    "geojson_key": "524"
+  },
+  {
+    "name": "Tajikistan",
+    "slug": "tajikistan",
+    "type": "country",
+    "area_sq_mi": 55251,
+    "ri_ratio": 45.51,
+    "geojson_key": "762"
+  },
+  {
+    "name": "Greece",
+    "slug": "greece",
+    "type": "country",
+    "area_sq_mi": 50949,
+    "ri_ratio": 41.97,
+    "geojson_key": "300"
+  },
+  {
+    "name": "Nicaragua",
+    "slug": "nicaragua",
+    "type": "country",
+    "area_sq_mi": 50194,
+    "ri_ratio": 41.35,
+    "geojson_key": "558"
+  },
+  {
+    "name": "North Korea",
+    "slug": "north-korea",
+    "type": "country",
+    "area_sq_mi": 46541,
+    "ri_ratio": 38.34,
+    "geojson_key": "408"
+  },
+  {
+    "name": "Malawi",
+    "slug": "malawi",
+    "type": "country",
+    "area_sq_mi": 45747,
+    "ri_ratio": 37.68,
+    "geojson_key": "454"
+  },
+  {
+    "name": "Eritrea",
+    "slug": "eritrea",
+    "type": "country",
+    "area_sq_mi": 45406,
+    "ri_ratio": 37.4,
+    "geojson_key": "232"
+  },
+  {
+    "name": "Benin",
+    "slug": "benin",
+    "type": "country",
+    "area_sq_mi": 43484,
+    "ri_ratio": 35.82,
+    "geojson_key": "204"
+  },
+  {
+    "name": "Honduras",
+    "slug": "honduras",
+    "type": "country",
+    "area_sq_mi": 43433,
+    "ri_ratio": 35.78,
+    "geojson_key": "340"
+  },
+  {
+    "name": "Liberia",
+    "slug": "liberia",
+    "type": "country",
+    "area_sq_mi": 43000,
+    "ri_ratio": 35.42,
+    "geojson_key": "430"
+  },
+  {
+    "name": "Bulgaria",
+    "slug": "bulgaria",
+    "type": "country",
+    "area_sq_mi": 42855,
+    "ri_ratio": 35.3,
+    "geojson_key": "100"
+  },
+  {
+    "name": "Cuba",
+    "slug": "cuba",
+    "type": "country",
+    "area_sq_mi": 42426,
+    "ri_ratio": 34.95,
+    "geojson_key": "192"
+  },
+  {
+    "name": "Guatemala",
+    "slug": "guatemala",
+    "type": "country",
+    "area_sq_mi": 42042,
+    "ri_ratio": 34.63,
+    "geojson_key": "320"
+  },
+  {
+    "name": "Iceland",
+    "slug": "iceland",
+    "type": "country",
+    "area_sq_mi": 39769,
+    "ri_ratio": 32.76,
+    "geojson_key": "352"
+  },
+  {
+    "name": "South Korea",
+    "slug": "south-korea",
+    "type": "country",
+    "area_sq_mi": 38691,
+    "ri_ratio": 31.87,
+    "geojson_key": "410"
+  },
+  {
+    "name": "Hungary",
+    "slug": "hungary",
+    "type": "country",
+    "area_sq_mi": 35920,
+    "ri_ratio": 29.59,
+    "geojson_key": "348"
+  },
+  {
+    "name": "Portugal",
+    "slug": "portugal",
+    "type": "country",
+    "area_sq_mi": 35556,
+    "ri_ratio": 29.29,
+    "geojson_key": "620"
+  },
+  {
+    "name": "Jordan",
+    "slug": "jordan",
+    "type": "country",
+    "area_sq_mi": 34495,
+    "ri_ratio": 28.41,
+    "geojson_key": "400"
+  },
+  {
+    "name": "Azerbaijan",
+    "slug": "azerbaijan",
+    "type": "country",
+    "area_sq_mi": 33436,
+    "ri_ratio": 27.54,
+    "geojson_key": "031"
+  },
+  {
+    "name": "Austria",
+    "slug": "austria",
+    "type": "country",
+    "area_sq_mi": 32386,
+    "ri_ratio": 26.68,
+    "geojson_key": "040"
+  },
+  {
+    "name": "United Arab Emirates",
+    "slug": "united-arab-emirates",
+    "type": "country",
+    "area_sq_mi": 32278,
+    "ri_ratio": 26.59,
+    "geojson_key": "784"
+  },
+  {
+    "name": "Czech Republic",
+    "slug": "czech-republic",
+    "type": "country",
+    "area_sq_mi": 30450,
+    "ri_ratio": 25.08,
+    "geojson_key": "203"
+  },
+  {
+    "name": "Serbia",
+    "slug": "serbia",
+    "type": "country",
+    "area_sq_mi": 29913,
+    "ri_ratio": 24.64,
+    "geojson_key": "688"
+  },
+  {
+    "name": "Panama",
+    "slug": "panama",
+    "type": "country",
+    "area_sq_mi": 29120,
+    "ri_ratio": 23.99,
+    "geojson_key": "591"
+  },
+  {
+    "name": "Sierra Leone",
+    "slug": "sierra-leone",
+    "type": "country",
+    "area_sq_mi": 27699,
+    "ri_ratio": 22.82,
+    "geojson_key": "694"
+  },
+  {
+    "name": "Ireland",
+    "slug": "ireland",
+    "type": "country",
+    "area_sq_mi": 27133,
+    "ri_ratio": 22.35,
+    "geojson_key": "372"
+  },
+  {
+    "name": "Georgia",
+    "slug": "georgia",
+    "type": "country",
+    "area_sq_mi": 26911,
+    "ri_ratio": 22.17,
+    "geojson_key": "268"
+  },
+  {
+    "name": "Sri Lanka",
+    "slug": "sri-lanka",
+    "type": "country",
+    "area_sq_mi": 25332,
+    "ri_ratio": 20.87,
+    "geojson_key": "144"
+  },
+  {
+    "name": "Lithuania",
+    "slug": "lithuania",
+    "type": "country",
+    "area_sq_mi": 25212,
+    "ri_ratio": 20.77,
+    "geojson_key": "440"
+  },
+  {
+    "name": "Latvia",
+    "slug": "latvia",
+    "type": "country",
+    "area_sq_mi": 24938,
+    "ri_ratio": 20.54,
+    "geojson_key": "428"
+  },
+  {
+    "name": "Togo",
+    "slug": "togo",
+    "type": "country",
+    "area_sq_mi": 21925,
+    "ri_ratio": 18.06,
+    "geojson_key": "768"
+  },
+  {
+    "name": "Croatia",
+    "slug": "croatia",
+    "type": "country",
+    "area_sq_mi": 21851,
+    "ri_ratio": 18,
+    "geojson_key": "191"
+  },
+  {
+    "name": "Bosnia and Herzegovina",
+    "slug": "bosnia-and-herzegovina",
+    "type": "country",
+    "area_sq_mi": 19767,
+    "ri_ratio": 16.28,
+    "geojson_key": "070"
+  },
+  {
+    "name": "Costa Rica",
+    "slug": "costa-rica",
+    "type": "country",
+    "area_sq_mi": 19730,
+    "ri_ratio": 16.25,
+    "geojson_key": "188"
+  },
+  {
+    "name": "Slovakia",
+    "slug": "slovakia",
+    "type": "country",
+    "area_sq_mi": 18933,
+    "ri_ratio": 15.6,
+    "geojson_key": "703"
+  },
+  {
+    "name": "Dominican Republic",
+    "slug": "dominican-republic",
+    "type": "country",
+    "area_sq_mi": 18792,
+    "ri_ratio": 15.48,
+    "geojson_key": "214"
+  },
+  {
+    "name": "Estonia",
+    "slug": "estonia",
+    "type": "country",
+    "area_sq_mi": 17462,
+    "ri_ratio": 14.38,
+    "geojson_key": "233"
+  },
+  {
+    "name": "Denmark",
+    "slug": "denmark",
+    "type": "country",
+    "area_sq_mi": 16639,
+    "ri_ratio": 13.71,
+    "geojson_key": "208"
+  },
+  {
+    "name": "Netherlands",
+    "slug": "netherlands",
+    "type": "country",
+    "area_sq_mi": 16040,
+    "ri_ratio": 13.21,
+    "geojson_key": "528"
+  },
+  {
+    "name": "Switzerland",
+    "slug": "switzerland",
+    "type": "country",
+    "area_sq_mi": 15940,
+    "ri_ratio": 13.13,
+    "geojson_key": "756"
+  },
+  {
+    "name": "Bhutan",
+    "slug": "bhutan",
+    "type": "country",
+    "area_sq_mi": 14824,
+    "ri_ratio": 12.21,
+    "geojson_key": "064"
+  },
+  {
+    "name": "Taiwan",
+    "slug": "taiwan",
+    "type": "country",
+    "area_sq_mi": 13974,
+    "ri_ratio": 11.51,
+    "geojson_key": "158"
+  },
+  {
+    "name": "Guinea-Bissau",
+    "slug": "guinea-bissau",
+    "type": "country",
+    "area_sq_mi": 13948,
+    "ri_ratio": 11.49,
+    "geojson_key": "624"
+  },
+  {
+    "name": "Moldova",
+    "slug": "moldova",
+    "type": "country",
+    "area_sq_mi": 13070,
+    "ri_ratio": 10.77,
+    "geojson_key": "498"
+  },
+  {
+    "name": "Belgium",
+    "slug": "belgium",
+    "type": "country",
+    "area_sq_mi": 11787,
+    "ri_ratio": 9.71,
+    "geojson_key": "056"
+  },
+  {
+    "name": "Lesotho",
+    "slug": "lesotho",
+    "type": "country",
+    "area_sq_mi": 11583,
+    "ri_ratio": 9.54,
+    "geojson_key": "426"
+  },
+  {
+    "name": "Armenia",
+    "slug": "armenia",
+    "type": "country",
+    "area_sq_mi": 11484,
+    "ri_ratio": 9.46,
+    "geojson_key": "051"
+  },
+  {
+    "name": "Solomon Islands",
+    "slug": "solomon-islands",
+    "type": "country",
+    "area_sq_mi": 11157,
+    "ri_ratio": 9.19,
+    "geojson_key": "090"
+  },
+  {
+    "name": "Albania",
+    "slug": "albania",
+    "type": "country",
+    "area_sq_mi": 11100,
+    "ri_ratio": 9.14,
+    "geojson_key": "008"
+  },
+  {
+    "name": "Equatorial Guinea",
+    "slug": "equatorial-guinea",
+    "type": "country",
+    "area_sq_mi": 10831,
+    "ri_ratio": 8.92,
+    "geojson_key": "226"
+  },
+  {
+    "name": "Burundi",
+    "slug": "burundi",
+    "type": "country",
+    "area_sq_mi": 10745,
+    "ri_ratio": 8.85,
+    "geojson_key": "108"
+  },
+  {
+    "name": "Haiti",
+    "slug": "haiti",
+    "type": "country",
+    "area_sq_mi": 10714,
+    "ri_ratio": 8.83,
+    "geojson_key": "332"
+  },
+  {
+    "name": "Rwanda",
+    "slug": "rwanda",
+    "type": "country",
+    "area_sq_mi": 10169,
+    "ri_ratio": 8.38,
+    "geojson_key": "646"
+  },
+  {
+    "name": "North Macedonia",
+    "slug": "north-macedonia",
+    "type": "country",
+    "area_sq_mi": 9928,
+    "ri_ratio": 8.18,
+    "geojson_key": "807"
+  },
+  {
+    "name": "Djibouti",
+    "slug": "djibouti",
+    "type": "country",
+    "area_sq_mi": 8958,
+    "ri_ratio": 7.38,
+    "geojson_key": "262"
+  },
+  {
+    "name": "Belize",
+    "slug": "belize",
+    "type": "country",
+    "area_sq_mi": 8867,
+    "ri_ratio": 7.3,
+    "geojson_key": "084"
+  },
+  {
+    "name": "El Salvador",
+    "slug": "el-salvador",
+    "type": "country",
+    "area_sq_mi": 8124,
+    "ri_ratio": 6.69,
+    "geojson_key": "222"
+  },
+  {
+    "name": "Israel",
+    "slug": "israel",
+    "type": "country",
+    "area_sq_mi": 8019,
+    "ri_ratio": 6.61,
+    "geojson_key": "376"
+  },
+  {
+    "name": "Slovenia",
+    "slug": "slovenia",
+    "type": "country",
+    "area_sq_mi": 7827,
+    "ri_ratio": 6.45,
+    "geojson_key": "705"
+  },
+  {
+    "name": "Fiji",
+    "slug": "fiji",
+    "type": "country",
+    "area_sq_mi": 7056,
+    "ri_ratio": 5.81,
+    "geojson_key": "242"
+  },
+  {
+    "name": "Kuwait",
+    "slug": "kuwait",
+    "type": "country",
+    "area_sq_mi": 6880,
+    "ri_ratio": 5.67,
+    "geojson_key": "414"
+  },
+  {
+    "name": "Eswatini",
+    "slug": "eswatini",
+    "type": "country",
+    "area_sq_mi": 6704,
+    "ri_ratio": 5.52,
+    "geojson_key": "748"
+  },
+  {
+    "name": "Timor-Leste",
+    "slug": "timor-leste",
+    "type": "country",
+    "area_sq_mi": 5743,
+    "ri_ratio": 4.73,
+    "geojson_key": "626"
+  },
+  {
+    "name": "Bahamas",
+    "slug": "bahamas",
+    "type": "country",
+    "area_sq_mi": 5358,
+    "ri_ratio": 4.41,
+    "geojson_key": "044"
+  },
+  {
+    "name": "Montenegro",
+    "slug": "montenegro",
+    "type": "country",
+    "area_sq_mi": 5333,
+    "ri_ratio": 4.39,
+    "geojson_key": "499"
+  },
+  {
+    "name": "Vanuatu",
+    "slug": "vanuatu",
+    "type": "country",
+    "area_sq_mi": 4706,
+    "ri_ratio": 3.88,
+    "geojson_key": "548"
+  },
+  {
+    "name": "Qatar",
+    "slug": "qatar",
+    "type": "country",
+    "area_sq_mi": 4473,
+    "ri_ratio": 3.68,
+    "geojson_key": "634"
+  },
+  {
+    "name": "Gambia",
+    "slug": "gambia",
+    "type": "country",
+    "area_sq_mi": 4361,
+    "ri_ratio": 3.59,
+    "geojson_key": "270"
+  },
+  {
+    "name": "Jamaica",
+    "slug": "jamaica",
+    "type": "country",
+    "area_sq_mi": 4244,
+    "ri_ratio": 3.5,
+    "geojson_key": "388"
+  },
+  {
+    "name": "Kosovo",
+    "slug": "kosovo",
+    "type": "country",
+    "area_sq_mi": 4203,
+    "ri_ratio": 3.46
+  },
+  {
+    "name": "Lebanon",
+    "slug": "lebanon",
+    "type": "country",
+    "area_sq_mi": 4036,
+    "ri_ratio": 3.32,
+    "geojson_key": "422"
+  },
+  {
+    "name": "Cyprus",
+    "slug": "cyprus",
+    "type": "country",
+    "area_sq_mi": 3572,
+    "ri_ratio": 2.94,
+    "geojson_key": "196"
+  },
+  {
+    "name": "Brunei",
+    "slug": "brunei",
+    "type": "country",
+    "area_sq_mi": 2226,
+    "ri_ratio": 1.83,
+    "geojson_key": "096"
+  },
+  {
+    "name": "Trinidad and Tobago",
+    "slug": "trinidad-and-tobago",
+    "type": "country",
+    "area_sq_mi": 1980,
+    "ri_ratio": 1.63,
+    "geojson_key": "780"
+  },
+  {
+    "name": "Cape Verde",
+    "slug": "cape-verde",
+    "type": "country",
+    "area_sq_mi": 1557,
+    "ri_ratio": 1.28,
+    "geojson_key": "132"
+  },
+  {
+    "name": "Samoa",
+    "slug": "samoa",
+    "type": "country",
+    "area_sq_mi": 1093,
+    "ri_ratio": 0.9,
+    "geojson_key": "882"
+  },
+  {
+    "name": "Luxembourg",
+    "slug": "luxembourg",
+    "type": "country",
+    "area_sq_mi": 998,
+    "ri_ratio": 0.82,
+    "geojson_key": "442"
+  },
+  {
+    "name": "Comoros",
+    "slug": "comoros",
+    "type": "country",
+    "area_sq_mi": 863,
+    "ri_ratio": 0.71,
+    "geojson_key": "174"
+  },
+  {
+    "name": "Mauritius",
+    "slug": "mauritius",
+    "type": "country",
+    "area_sq_mi": 788,
+    "ri_ratio": 0.65,
+    "geojson_key": "480"
+  },
+  {
+    "name": "São Tomé and Príncipe",
+    "slug": "sao-tome-and-príncipe",
+    "type": "country",
+    "area_sq_mi": 386,
+    "ri_ratio": 0.32,
+    "geojson_key": "678"
+  },
+  {
+    "name": "Kiribati",
+    "slug": "kiribati",
+    "type": "country",
+    "area_sq_mi": 313,
+    "ri_ratio": 0.26,
+    "geojson_key": "296"
+  },
+  {
+    "name": "Bahrain",
+    "slug": "bahrain",
+    "type": "country",
+    "area_sq_mi": 293,
+    "ri_ratio": 0.24,
+    "geojson_key": "048"
+  },
+  {
+    "name": "Dominica",
+    "slug": "dominica",
+    "type": "country",
+    "area_sq_mi": 290,
+    "ri_ratio": 0.24,
+    "geojson_key": "212"
+  },
+  {
+    "name": "Tonga",
+    "slug": "tonga",
+    "type": "country",
+    "area_sq_mi": 289,
+    "ri_ratio": 0.24,
+    "geojson_key": "776"
+  },
+  {
+    "name": "Singapore",
+    "slug": "singapore",
+    "type": "country",
+    "area_sq_mi": 281,
+    "ri_ratio": 0.23,
+    "geojson_key": "702"
+  },
+  {
+    "name": "Micronesia",
+    "slug": "micronesia",
+    "type": "country",
+    "area_sq_mi": 271,
+    "ri_ratio": 0.22,
+    "geojson_key": "583"
+  },
+  {
+    "name": "Saint Lucia",
+    "slug": "saint-lucia",
+    "type": "country",
+    "area_sq_mi": 238,
+    "ri_ratio": 0.2,
+    "geojson_key": "662"
+  },
+  {
+    "name": "Andorra",
+    "slug": "andorra",
+    "type": "country",
+    "area_sq_mi": 181,
+    "ri_ratio": 0.15,
+    "geojson_key": "020"
+  },
+  {
+    "name": "Palau",
+    "slug": "palau",
+    "type": "country",
+    "area_sq_mi": 177,
+    "ri_ratio": 0.15,
+    "geojson_key": "585"
+  },
+  {
+    "name": "Seychelles",
+    "slug": "seychelles",
+    "type": "country",
+    "area_sq_mi": 176,
+    "ri_ratio": 0.14,
+    "geojson_key": "690"
+  },
+  {
+    "name": "Antigua and Barbuda",
+    "slug": "antigua-and-barbuda",
+    "type": "country",
+    "area_sq_mi": 170,
+    "ri_ratio": 0.14,
+    "geojson_key": "028"
+  },
+  {
+    "name": "Barbados",
+    "slug": "barbados",
+    "type": "country",
+    "area_sq_mi": 166,
+    "ri_ratio": 0.14,
+    "geojson_key": "052"
+  },
+  {
+    "name": "Saint Vincent and the Grenadines",
+    "slug": "saint-vincent-and-the-grenadines",
+    "type": "country",
+    "area_sq_mi": 150,
+    "ri_ratio": 0.12,
+    "geojson_key": "670"
+  },
+  {
+    "name": "Grenada",
+    "slug": "grenada",
+    "type": "country",
+    "area_sq_mi": 133,
+    "ri_ratio": 0.11,
+    "geojson_key": "308"
+  },
+  {
+    "name": "Malta",
+    "slug": "malta",
+    "type": "country",
+    "area_sq_mi": 122,
+    "ri_ratio": 0.1,
+    "geojson_key": "470"
+  },
+  {
+    "name": "Maldives",
+    "slug": "maldives",
+    "type": "country",
+    "area_sq_mi": 115,
+    "ri_ratio": 0.09,
+    "geojson_key": "462"
+  },
+  {
+    "name": "Saint Kitts and Nevis",
+    "slug": "saint-kitts-and-nevis",
+    "type": "country",
+    "area_sq_mi": 101,
+    "ri_ratio": 0.08,
+    "geojson_key": "659"
+  },
+  {
+    "name": "Marshall Islands",
+    "slug": "marshall-islands",
+    "type": "country",
+    "area_sq_mi": 70,
+    "ri_ratio": 0.06,
+    "geojson_key": "584"
+  },
+  {
+    "name": "Liechtenstein",
+    "slug": "liechtenstein",
+    "type": "country",
+    "area_sq_mi": 62,
+    "ri_ratio": 0.05,
+    "geojson_key": "438"
+  },
+  {
+    "name": "San Marino",
+    "slug": "san-marino",
+    "type": "country",
+    "area_sq_mi": 24,
+    "ri_ratio": 0.02,
+    "geojson_key": "674"
+  },
+  {
+    "name": "Tuvalu",
+    "slug": "tuvalu",
+    "type": "country",
+    "area_sq_mi": 10,
+    "ri_ratio": 0.01,
+    "geojson_key": null
+  },
+  {
+    "name": "Nauru",
+    "slug": "nauru",
+    "type": "country",
+    "area_sq_mi": 8.1,
+    "ri_ratio": 0.01,
+    "geojson_key": "520"
+  },
+  {
+    "name": "Monaco",
+    "slug": "monaco",
+    "type": "country",
+    "area_sq_mi": 0.78,
+    "ri_ratio": 0.000643,
+    "geojson_key": "492"
+  },
+  {
+    "name": "Vatican City",
+    "slug": "vatican-city",
+    "type": "country",
+    "area_sq_mi": 0.17,
+    "ri_ratio": 0.00014,
+    "geojson_key": "336"
+  },
+  {
+    "name": "Alaska",
+    "slug": "alaska",
+    "type": "us_state",
+    "area_sq_mi": 663268,
+    "ri_ratio": 546.35,
+    "geojson_key": "02"
+  },
+  {
+    "name": "Texas",
+    "slug": "texas",
+    "type": "us_state",
+    "area_sq_mi": 268596,
+    "ri_ratio": 221.25,
+    "geojson_key": "48"
+  },
+  {
+    "name": "California",
+    "slug": "california",
+    "type": "us_state",
+    "area_sq_mi": 163696,
+    "ri_ratio": 134.84,
+    "geojson_key": "06"
+  },
+  {
+    "name": "Montana",
+    "slug": "montana",
+    "type": "us_state",
+    "area_sq_mi": 147040,
+    "ri_ratio": 121.12,
+    "geojson_key": "30"
+  },
+  {
+    "name": "New Mexico",
+    "slug": "new-mexico",
+    "type": "us_state",
+    "area_sq_mi": 121590,
+    "ri_ratio": 100.16,
+    "geojson_key": "35"
+  },
+  {
+    "name": "Arizona",
+    "slug": "arizona",
+    "type": "us_state",
+    "area_sq_mi": 113990,
+    "ri_ratio": 93.9,
+    "geojson_key": "04"
+  },
+  {
+    "name": "Nevada",
+    "slug": "nevada",
+    "type": "us_state",
+    "area_sq_mi": 110572,
+    "ri_ratio": 91.08,
+    "geojson_key": "32"
+  },
+  {
+    "name": "Colorado",
+    "slug": "colorado",
+    "type": "us_state",
+    "area_sq_mi": 104094,
+    "ri_ratio": 85.74,
+    "geojson_key": "08"
+  },
+  {
+    "name": "Oregon",
+    "slug": "oregon",
+    "type": "us_state",
+    "area_sq_mi": 98379,
+    "ri_ratio": 81.04,
+    "geojson_key": "41"
+  },
+  {
+    "name": "Wyoming",
+    "slug": "wyoming",
+    "type": "us_state",
+    "area_sq_mi": 97813,
+    "ri_ratio": 80.57,
+    "geojson_key": "56"
+  },
+  {
+    "name": "Michigan",
+    "slug": "michigan",
+    "type": "us_state",
+    "area_sq_mi": 96714,
+    "ri_ratio": 79.67,
+    "geojson_key": "26"
+  },
+  {
+    "name": "Minnesota",
+    "slug": "minnesota",
+    "type": "us_state",
+    "area_sq_mi": 86936,
+    "ri_ratio": 71.61,
+    "geojson_key": "27"
+  },
+  {
+    "name": "Utah",
+    "slug": "utah",
+    "type": "us_state",
+    "area_sq_mi": 84897,
+    "ri_ratio": 69.93,
+    "geojson_key": "49"
+  },
+  {
+    "name": "Idaho",
+    "slug": "idaho",
+    "type": "us_state",
+    "area_sq_mi": 83569,
+    "ri_ratio": 68.84,
+    "geojson_key": "16"
+  },
+  {
+    "name": "Kansas",
+    "slug": "kansas",
+    "type": "us_state",
+    "area_sq_mi": 82278,
+    "ri_ratio": 67.77,
+    "geojson_key": "20"
+  },
+  {
+    "name": "Nebraska",
+    "slug": "nebraska",
+    "type": "us_state",
+    "area_sq_mi": 77358,
+    "ri_ratio": 63.72,
+    "geojson_key": "31"
+  },
+  {
+    "name": "South Dakota",
+    "slug": "south-dakota",
+    "type": "us_state",
+    "area_sq_mi": 77116,
+    "ri_ratio": 63.52,
+    "geojson_key": "46"
+  },
+  {
+    "name": "Washington",
+    "slug": "washington",
+    "type": "us_state",
+    "area_sq_mi": 71298,
+    "ri_ratio": 58.73,
+    "geojson_key": "53"
+  },
+  {
+    "name": "North Dakota",
+    "slug": "north-dakota",
+    "type": "us_state",
+    "area_sq_mi": 70698,
+    "ri_ratio": 58.24,
+    "geojson_key": "38"
+  },
+  {
+    "name": "Oklahoma",
+    "slug": "oklahoma",
+    "type": "us_state",
+    "area_sq_mi": 69899,
+    "ri_ratio": 57.58,
+    "geojson_key": "40"
+  },
+  {
+    "name": "Missouri",
+    "slug": "missouri",
+    "type": "us_state",
+    "area_sq_mi": 69707,
+    "ri_ratio": 57.42,
+    "geojson_key": "29"
+  },
+  {
+    "name": "Florida",
+    "slug": "florida",
+    "type": "us_state",
+    "area_sq_mi": 65758,
+    "ri_ratio": 54.17,
+    "geojson_key": "12"
+  },
+  {
+    "name": "Wisconsin",
+    "slug": "wisconsin",
+    "type": "us_state",
+    "area_sq_mi": 65496,
+    "ri_ratio": 53.95,
+    "geojson_key": "55"
+  },
+  {
+    "name": "Georgia",
+    "slug": "georgia-state",
+    "type": "us_state",
+    "area_sq_mi": 59425,
+    "ri_ratio": 48.95,
+    "geojson_key": "13"
+  },
+  {
+    "name": "Illinois",
+    "slug": "illinois",
+    "type": "us_state",
+    "area_sq_mi": 57914,
+    "ri_ratio": 47.71,
+    "geojson_key": "17"
+  },
+  {
+    "name": "Iowa",
+    "slug": "iowa",
+    "type": "us_state",
+    "area_sq_mi": 56273,
+    "ri_ratio": 46.35,
+    "geojson_key": "19"
+  },
+  {
+    "name": "New York",
+    "slug": "new-york",
+    "type": "us_state",
+    "area_sq_mi": 54555,
+    "ri_ratio": 44.94,
+    "geojson_key": "36"
+  },
+  {
+    "name": "North Carolina",
+    "slug": "north-carolina",
+    "type": "us_state",
+    "area_sq_mi": 53819,
+    "ri_ratio": 44.33,
+    "geojson_key": "37"
+  },
+  {
+    "name": "Arkansas",
+    "slug": "arkansas",
+    "type": "us_state",
+    "area_sq_mi": 53179,
+    "ri_ratio": 43.8,
+    "geojson_key": "05"
+  },
+  {
+    "name": "Alabama",
+    "slug": "alabama",
+    "type": "us_state",
+    "area_sq_mi": 52420,
+    "ri_ratio": 43.18,
+    "geojson_key": "01"
+  },
+  {
+    "name": "Louisiana",
+    "slug": "louisiana",
+    "type": "us_state",
+    "area_sq_mi": 52378,
+    "ri_ratio": 43.14,
+    "geojson_key": "22"
+  },
+  {
+    "name": "Mississippi",
+    "slug": "mississippi",
+    "type": "us_state",
+    "area_sq_mi": 48432,
+    "ri_ratio": 39.89,
+    "geojson_key": "28"
+  },
+  {
+    "name": "Pennsylvania",
+    "slug": "pennsylvania",
+    "type": "us_state",
+    "area_sq_mi": 46054,
+    "ri_ratio": 37.94,
+    "geojson_key": "42"
+  },
+  {
+    "name": "Ohio",
+    "slug": "ohio",
+    "type": "us_state",
+    "area_sq_mi": 44826,
+    "ri_ratio": 36.92,
+    "geojson_key": "39"
+  },
+  {
+    "name": "Virginia",
+    "slug": "virginia",
+    "type": "us_state",
+    "area_sq_mi": 42775,
+    "ri_ratio": 35.23,
+    "geojson_key": "51"
+  },
+  {
+    "name": "Tennessee",
+    "slug": "tennessee",
+    "type": "us_state",
+    "area_sq_mi": 42144,
+    "ri_ratio": 34.71,
+    "geojson_key": "47"
+  },
+  {
+    "name": "Kentucky",
+    "slug": "kentucky",
+    "type": "us_state",
+    "area_sq_mi": 40408,
+    "ri_ratio": 33.29,
+    "geojson_key": "21"
+  },
+  {
+    "name": "Indiana",
+    "slug": "indiana",
+    "type": "us_state",
+    "area_sq_mi": 36420,
+    "ri_ratio": 30,
+    "geojson_key": "18"
+  },
+  {
+    "name": "Maine",
+    "slug": "maine",
+    "type": "us_state",
+    "area_sq_mi": 35380,
+    "ri_ratio": 29.14,
+    "geojson_key": "23"
+  },
+  {
+    "name": "South Carolina",
+    "slug": "south-carolina",
+    "type": "us_state",
+    "area_sq_mi": 32020,
+    "ri_ratio": 26.38,
+    "geojson_key": "45"
+  },
+  {
+    "name": "West Virginia",
+    "slug": "west-virginia",
+    "type": "us_state",
+    "area_sq_mi": 24230,
+    "ri_ratio": 19.96,
+    "geojson_key": "54"
+  },
+  {
+    "name": "Maryland",
+    "slug": "maryland",
+    "type": "us_state",
+    "area_sq_mi": 12407,
+    "ri_ratio": 10.22,
+    "geojson_key": "24"
+  },
+  {
+    "name": "Hawaii",
+    "slug": "hawaii",
+    "type": "us_state",
+    "area_sq_mi": 10932,
+    "ri_ratio": 9,
+    "geojson_key": "15"
+  },
+  {
+    "name": "Massachusetts",
+    "slug": "massachusetts",
+    "type": "us_state",
+    "area_sq_mi": 10554,
+    "ri_ratio": 8.69,
+    "geojson_key": "25"
+  },
+  {
+    "name": "Vermont",
+    "slug": "vermont",
+    "type": "us_state",
+    "area_sq_mi": 9616,
+    "ri_ratio": 7.92,
+    "geojson_key": "50"
+  },
+  {
+    "name": "New Hampshire",
+    "slug": "new-hampshire",
+    "type": "us_state",
+    "area_sq_mi": 9349,
+    "ri_ratio": 7.7,
+    "geojson_key": "33"
+  },
+  {
+    "name": "New Jersey",
+    "slug": "new-jersey",
+    "type": "us_state",
+    "area_sq_mi": 8723,
+    "ri_ratio": 7.19,
+    "geojson_key": "34"
+  },
+  {
+    "name": "Connecticut",
+    "slug": "connecticut",
+    "type": "us_state",
+    "area_sq_mi": 5543,
+    "ri_ratio": 4.57,
+    "geojson_key": "09"
+  },
+  {
+    "name": "Delaware",
+    "slug": "delaware",
+    "type": "us_state",
+    "area_sq_mi": 2489,
+    "ri_ratio": 2.05,
+    "geojson_key": "10"
+  },
+  {
+    "name": "Rhode Island",
+    "slug": "rhode-island",
+    "type": "us_state",
+    "area_sq_mi": 1214,
+    "ri_ratio": 1,
+    "geojson_key": "44"
+  },
+  {
+    "name": "Wrangell-St. Elias National Park",
+    "slug": "wrangell-st-elias-national-park",
+    "type": "national_park",
+    "area_sq_mi": 20587,
+    "ri_ratio": 16.96,
+    "geojson_key": "WRST"
+  },
+  {
+    "name": "Gates of the Arctic National Park",
+    "slug": "gates-of-the-arctic-national-park",
+    "type": "national_park",
+    "area_sq_mi": 13238,
+    "ri_ratio": 10.9,
+    "geojson_key": "GAAR"
+  },
+  {
+    "name": "Denali National Park",
+    "slug": "denali-national-park",
+    "type": "national_park",
+    "area_sq_mi": 9492,
+    "ri_ratio": 7.82,
+    "geojson_key": "DENA"
+  },
+  {
+    "name": "Katmai National Park",
+    "slug": "katmai-national-park",
+    "type": "national_park",
+    "area_sq_mi": 6395,
+    "ri_ratio": 5.27,
+    "geojson_key": "KATM"
+  },
+  {
+    "name": "Death Valley National Park",
+    "slug": "death-valley-national-park",
+    "type": "national_park",
+    "area_sq_mi": 5262,
+    "ri_ratio": 4.33,
+    "geojson_key": "DEVA"
+  },
+  {
+    "name": "Glacier Bay National Park",
+    "slug": "glacier-bay-national-park",
+    "type": "national_park",
+    "area_sq_mi": 5037,
+    "ri_ratio": 4.15,
+    "geojson_key": "GLBA"
+  },
+  {
+    "name": "Lake Clark National Park",
+    "slug": "lake-clark-national-park",
+    "type": "national_park",
+    "area_sq_mi": 4030,
+    "ri_ratio": 3.32,
+    "geojson_key": "LACL"
+  },
+  {
+    "name": "Yellowstone National Park",
+    "slug": "yellowstone-national-park",
+    "type": "national_park",
+    "area_sq_mi": 3471,
+    "ri_ratio": 2.86,
+    "geojson_key": "YELL"
+  },
+  {
+    "name": "Kobuk Valley National Park",
+    "slug": "kobuk-valley-national-park",
+    "type": "national_park",
+    "area_sq_mi": 2736,
+    "ri_ratio": 2.25,
+    "geojson_key": "KOVA"
+  },
+  {
+    "name": "Everglades National Park",
+    "slug": "everglades-national-park",
+    "type": "national_park",
+    "area_sq_mi": 2357,
+    "ri_ratio": 1.94,
+    "geojson_key": "EVER"
+  },
+  {
+    "name": "Grand Canyon National Park",
+    "slug": "grand-canyon-national-park",
+    "type": "national_park",
+    "area_sq_mi": 1902,
+    "ri_ratio": 1.57,
+    "geojson_key": "GRCA"
+  },
+  {
+    "name": "Glacier National Park",
+    "slug": "glacier-national-park",
+    "type": "national_park",
+    "area_sq_mi": 1584,
+    "ri_ratio": 1.3,
+    "geojson_key": "GLAC"
+  },
+  {
+    "name": "Olympic National Park",
+    "slug": "olympic-national-park",
+    "type": "national_park",
+    "area_sq_mi": 1442,
+    "ri_ratio": 1.19,
+    "geojson_key": "OLYM"
+  },
+  {
+    "name": "Big Bend National Park",
+    "slug": "big-bend-national-park",
+    "type": "national_park",
+    "area_sq_mi": 1252,
+    "ri_ratio": 1.03,
+    "geojson_key": "BIBE"
+  },
+  {
+    "name": "Joshua Tree National Park",
+    "slug": "joshua-tree-national-park",
+    "type": "national_park",
+    "area_sq_mi": 1235,
+    "ri_ratio": 1.02,
+    "geojson_key": "JOTR"
+  },
+  {
+    "name": "Yosemite National Park",
+    "slug": "yosemite-national-park",
+    "type": "national_park",
+    "area_sq_mi": 1169,
+    "ri_ratio": 0.96,
+    "geojson_key": "YOSE"
+  },
+  {
+    "name": "Kenai Fjords National Park",
+    "slug": "kenai-fjords-national-park",
+    "type": "national_park",
+    "area_sq_mi": 1047,
+    "ri_ratio": 0.86,
+    "geojson_key": "KEFJ"
+  },
+  {
+    "name": "Isle Royale National Park",
+    "slug": "isle-royale-national-park",
+    "type": "national_park",
+    "area_sq_mi": 894,
+    "ri_ratio": 0.74,
+    "geojson_key": "ISRO"
+  },
+  {
+    "name": "North Cascades National Park",
+    "slug": "north-cascades-national-park",
+    "type": "national_park",
+    "area_sq_mi": 789,
+    "ri_ratio": 0.65,
+    "geojson_key": "NOCA"
+  },
+  {
+    "name": "Kings Canyon National Park",
+    "slug": "kings-canyon-national-park",
+    "type": "national_park",
+    "area_sq_mi": 722,
+    "ri_ratio": 0.59,
+    "geojson_key": "KICA"
+  },
+  {
+    "name": "Sequoia National Park",
+    "slug": "sequoia-national-park",
+    "type": "national_park",
+    "area_sq_mi": 631,
+    "ri_ratio": 0.52,
+    "geojson_key": "SEQU"
+  },
+  {
+    "name": "Canyonlands National Park",
+    "slug": "canyonlands-national-park",
+    "type": "national_park",
+    "area_sq_mi": 527,
+    "ri_ratio": 0.43,
+    "geojson_key": "CANY"
+  },
+  {
+    "name": "Great Smoky Mountains National Park",
+    "slug": "great-smoky-mountains-national-park",
+    "type": "national_park",
+    "area_sq_mi": 521,
+    "ri_ratio": 0.43,
+    "geojson_key": "GRSM"
+  },
+  {
+    "name": "Hawaii Volcanoes National Park",
+    "slug": "hawaii-volcanoes-national-park",
+    "type": "national_park",
+    "area_sq_mi": 505,
+    "ri_ratio": 0.42,
+    "geojson_key": "HAVO"
+  },
+  {
+    "name": "Grand Teton National Park",
+    "slug": "grand-teton-national-park",
+    "type": "national_park",
+    "area_sq_mi": 485,
+    "ri_ratio": 0.4,
+    "geojson_key": "GRTE"
+  },
+  {
+    "name": "Rocky Mountain National Park",
+    "slug": "rocky-mountain-national-park",
+    "type": "national_park",
+    "area_sq_mi": 415,
+    "ri_ratio": 0.34,
+    "geojson_key": "ROMO"
+  },
+  {
+    "name": "Channel Islands National Park",
+    "slug": "channel-islands-national-park",
+    "type": "national_park",
+    "area_sq_mi": 390,
+    "ri_ratio": 0.32,
+    "geojson_key": "CHIS"
+  },
+  {
+    "name": "Badlands National Park",
+    "slug": "badlands-national-park",
+    "type": "national_park",
+    "area_sq_mi": 379,
+    "ri_ratio": 0.31,
+    "geojson_key": "BADL"
+  },
+  {
+    "name": "Capitol Reef National Park",
+    "slug": "capitol-reef-national-park",
+    "type": "national_park",
+    "area_sq_mi": 378,
+    "ri_ratio": 0.31,
+    "geojson_key": "CARE"
+  },
+  {
+    "name": "Mount Rainier National Park",
+    "slug": "mount-rainier-national-park",
+    "type": "national_park",
+    "area_sq_mi": 369,
+    "ri_ratio": 0.3,
+    "geojson_key": "MORA"
+  },
+  {
+    "name": "Petrified Forest National Park",
+    "slug": "petrified-forest-national-park",
+    "type": "national_park",
+    "area_sq_mi": 346,
+    "ri_ratio": 0.29,
+    "geojson_key": "PEFO"
+  },
+  {
+    "name": "Voyageurs National Park",
+    "slug": "voyageurs-national-park",
+    "type": "national_park",
+    "area_sq_mi": 341,
+    "ri_ratio": 0.28,
+    "geojson_key": "VOYA"
+  },
+  {
+    "name": "Shenandoah National Park",
+    "slug": "shenandoah-national-park",
+    "type": "national_park",
+    "area_sq_mi": 311,
+    "ri_ratio": 0.26,
+    "geojson_key": "SHEN"
+  },
+  {
+    "name": "Crater Lake National Park",
+    "slug": "crater-lake-national-park",
+    "type": "national_park",
+    "area_sq_mi": 286,
+    "ri_ratio": 0.24,
+    "geojson_key": "CRLA"
+  },
+  {
+    "name": "Biscayne National Park",
+    "slug": "biscayne-national-park",
+    "type": "national_park",
+    "area_sq_mi": 270,
+    "ri_ratio": 0.22,
+    "geojson_key": "BISC"
+  },
+  {
+    "name": "Zion National Park",
+    "slug": "zion-national-park",
+    "type": "national_park",
+    "area_sq_mi": 229,
+    "ri_ratio": 0.19,
+    "geojson_key": "ZION"
+  },
+  {
+    "name": "White Sands National Park",
+    "slug": "white-sands-national-park",
+    "type": "national_park",
+    "area_sq_mi": 228,
+    "ri_ratio": 0.19,
+    "geojson_key": "WHSA"
+  },
+  {
+    "name": "Redwood National Park",
+    "slug": "redwood-national-park",
+    "type": "national_park",
+    "area_sq_mi": 217,
+    "ri_ratio": 0.18,
+    "geojson_key": "REDW"
+  },
+  {
+    "name": "Lassen Volcanic National Park",
+    "slug": "lassen-volcanic-national-park",
+    "type": "national_park",
+    "area_sq_mi": 166,
+    "ri_ratio": 0.14,
+    "geojson_key": "LAVO"
+  },
+  {
+    "name": "Great Sand Dunes National Park",
+    "slug": "great-sand-dunes-national-park",
+    "type": "national_park",
+    "area_sq_mi": 149,
+    "ri_ratio": 0.12,
+    "geojson_key": "GRSA"
+  },
+  {
+    "name": "Saguaro National Park",
+    "slug": "saguaro-national-park",
+    "type": "national_park",
+    "area_sq_mi": 143,
+    "ri_ratio": 0.12,
+    "geojson_key": "SAGU"
+  },
+  {
+    "name": "Guadalupe Mountains National Park",
+    "slug": "guadalupe-mountains-national-park",
+    "type": "national_park",
+    "area_sq_mi": 135,
+    "ri_ratio": 0.11,
+    "geojson_key": "GUMO"
+  },
+  {
+    "name": "Great Basin National Park",
+    "slug": "great-basin-national-park",
+    "type": "national_park",
+    "area_sq_mi": 121,
+    "ri_ratio": 0.1,
+    "geojson_key": "GRBA"
+  },
+  {
+    "name": "Arches National Park",
+    "slug": "arches-national-park",
+    "type": "national_park",
+    "area_sq_mi": 119,
+    "ri_ratio": 0.1,
+    "geojson_key": "ARCH"
+  },
+  {
+    "name": "New River Gorge National Park",
+    "slug": "new-river-gorge-national-park",
+    "type": "national_park",
+    "area_sq_mi": 113,
+    "ri_ratio": 0.09,
+    "geojson_key": "NERI"
+  },
+  {
+    "name": "Theodore Roosevelt National Park",
+    "slug": "theodore-roosevelt-national-park",
+    "type": "national_park",
+    "area_sq_mi": 110,
+    "ri_ratio": 0.09,
+    "geojson_key": "THRO"
+  },
+  {
+    "name": "Dry Tortugas National Park",
+    "slug": "dry-tortugas-national-park",
+    "type": "national_park",
+    "area_sq_mi": 101,
+    "ri_ratio": 0.08,
+    "geojson_key": "DRTO"
+  },
+  {
+    "name": "Mammoth Cave National Park",
+    "slug": "mammoth-cave-national-park",
+    "type": "national_park",
+    "area_sq_mi": 83,
+    "ri_ratio": 0.07,
+    "geojson_key": "MACA"
+  },
+  {
+    "name": "Mesa Verde National Park",
+    "slug": "mesa-verde-national-park",
+    "type": "national_park",
+    "area_sq_mi": 81,
+    "ri_ratio": 0.07,
+    "geojson_key": "MEVE"
+  },
+  {
+    "name": "Acadia National Park",
+    "slug": "acadia-national-park",
+    "type": "national_park",
+    "area_sq_mi": 76,
+    "ri_ratio": 0.06,
+    "geojson_key": "ACAD"
+  },
+  {
+    "name": "Carlsbad Caverns National Park",
+    "slug": "carlsbad-caverns-national-park",
+    "type": "national_park",
+    "area_sq_mi": 73,
+    "ri_ratio": 0.06,
+    "geojson_key": "CAVE"
+  },
+  {
+    "name": "Bryce Canyon National Park",
+    "slug": "bryce-canyon-national-park",
+    "type": "national_park",
+    "area_sq_mi": 56,
+    "ri_ratio": 0.05,
+    "geojson_key": "BRCA"
+  },
+  {
+    "name": "Haleakala National Park",
+    "slug": "haleakala-national-park",
+    "type": "national_park",
+    "area_sq_mi": 52,
+    "ri_ratio": 0.04,
+    "geojson_key": "HALE"
+  },
+  {
+    "name": "Cuyahoga Valley National Park",
+    "slug": "cuyahoga-valley-national-park",
+    "type": "national_park",
+    "area_sq_mi": 51,
+    "ri_ratio": 0.04,
+    "geojson_key": "CUVA"
+  },
+  {
+    "name": "Black Canyon of the Gunnison National Park",
+    "slug": "black-canyon-of-the-gunnison-national-park",
+    "type": "national_park",
+    "area_sq_mi": 48,
+    "ri_ratio": 0.04,
+    "geojson_key": "BLCA"
+  },
+  {
+    "name": "Wind Cave National Park",
+    "slug": "wind-cave-national-park",
+    "type": "national_park",
+    "area_sq_mi": 44,
+    "ri_ratio": 0.04,
+    "geojson_key": "WICA"
+  },
+  {
+    "name": "Congaree National Park",
+    "slug": "congaree-national-park",
+    "type": "national_park",
+    "area_sq_mi": 42,
+    "ri_ratio": 0.03,
+    "geojson_key": "CONG"
+  },
+  {
+    "name": "Pinnacles National Park",
+    "slug": "pinnacles-national-park",
+    "type": "national_park",
+    "area_sq_mi": 42,
+    "ri_ratio": 0.03,
+    "geojson_key": "PINN"
+  },
+  {
+    "name": "Indiana Dunes National Park",
+    "slug": "indiana-dunes-national-park",
+    "type": "national_park",
+    "area_sq_mi": 24,
+    "ri_ratio": 0.02,
+    "geojson_key": "INDU"
+  },
+  {
+    "name": "American Samoa National Park",
+    "slug": "american-samoa-national-park",
+    "type": "national_park",
+    "area_sq_mi": 21,
+    "ri_ratio": 0.02,
+    "geojson_key": "NPSA"
+  },
+  {
+    "name": "Gauley River National Recreation Area",
+    "slug": "gauley-river-national-recreation-area",
+    "type": "national_park",
+    "area_sq_mi": 11,
+    "ri_ratio": 0.01,
+    "geojson_key": null
+  },
+  {
+    "name": "Hot Springs National Park",
+    "slug": "hot-springs-national-park",
+    "type": "national_park",
+    "area_sq_mi": 9,
+    "ri_ratio": 0.01,
+    "geojson_key": "HOSP"
+  },
+  {
+    "name": "Chongqing, China",
+    "slug": "chongqing-china",
+    "type": "city",
+    "area_sq_mi": 31082,
+    "ri_ratio": 25.6,
+    "geojson_key": null
+  },
+  {
+    "name": "Beijing, China",
+    "slug": "beijing-china",
+    "type": "city",
+    "area_sq_mi": 6336,
+    "ri_ratio": 5.22,
+    "geojson_key": null
+  },
+  {
+    "name": "Sydney, Australia",
+    "slug": "sydney-australia",
+    "type": "city",
+    "area_sq_mi": 4775,
+    "ri_ratio": 3.93,
+    "geojson_key": null
+  },
+  {
+    "name": "Kinshasa, DRC",
+    "slug": "kinshasa-drc",
+    "type": "city",
+    "area_sq_mi": 3862,
+    "ri_ratio": 3.18,
+    "geojson_key": null
+  },
+  {
+    "name": "Melbourne, Australia",
+    "slug": "melbourne-australia",
+    "type": "city",
+    "area_sq_mi": 3219,
+    "ri_ratio": 2.65,
+    "geojson_key": null
+  },
+  {
+    "name": "Guangzhou, China",
+    "slug": "guangzhou-china",
+    "type": "city",
+    "area_sq_mi": 2870,
+    "ri_ratio": 2.36,
+    "geojson_key": null
+  },
+  {
+    "name": "Shanghai, China",
+    "slug": "shanghai-china",
+    "type": "city",
+    "area_sq_mi": 2448,
+    "ri_ratio": 2.02,
+    "geojson_key": null
+  },
+  {
+    "name": "Luanda, Angola",
+    "slug": "luanda-angola",
+    "type": "city",
+    "area_sq_mi": 2418,
+    "ri_ratio": 1.99,
+    "geojson_key": null
+  },
+  {
+    "name": "Istanbul, Turkey",
+    "slug": "istanbul-turkey",
+    "type": "city",
+    "area_sq_mi": 2063,
+    "ri_ratio": 1.7,
+    "geojson_key": null
+  },
+  {
+    "name": "Anchorage, AK",
+    "slug": "anchorage-ak",
+    "type": "city",
+    "area_sq_mi": 1961,
+    "ri_ratio": 1.62,
+    "geojson_key": null
+  },
+  {
+    "name": "Dubai, UAE",
+    "slug": "dubai-uae",
+    "type": "city",
+    "area_sq_mi": 1588,
+    "ri_ratio": 1.31,
+    "geojson_key": null
+  },
+  {
+    "name": "Karachi, Pakistan",
+    "slug": "karachi-pakistan",
+    "type": "city",
+    "area_sq_mi": 1362,
+    "ri_ratio": 1.12,
+    "geojson_key": null
+  },
+  {
+    "name": "Lima, Peru",
+    "slug": "lima-peru",
+    "type": "city",
+    "area_sq_mi": 1041,
+    "ri_ratio": 0.86,
+    "geojson_key": null
+  },
+  {
+    "name": "Moscow, Russia",
+    "slug": "moscow-russia",
+    "type": "city",
+    "area_sq_mi": 970,
+    "ri_ratio": 0.8,
+    "geojson_key": null
+  },
+  {
+    "name": "Jacksonville, FL",
+    "slug": "jacksonville-fl",
+    "type": "city",
+    "area_sq_mi": 874,
+    "ri_ratio": 0.72,
+    "geojson_key": null
+  },
+  {
+    "name": "Tokyo, Japan",
+    "slug": "tokyo-japan",
+    "type": "city",
+    "area_sq_mi": 847,
+    "ri_ratio": 0.7,
+    "geojson_key": null
+  },
+  {
+    "name": "Houston, TX",
+    "slug": "houston-tx",
+    "type": "city",
+    "area_sq_mi": 670,
+    "ri_ratio": 0.55,
+    "geojson_key": null
+  },
+  {
+    "name": "Johannesburg, South Africa",
+    "slug": "johannesburg-south-africa",
+    "type": "city",
+    "area_sq_mi": 632,
+    "ri_ratio": 0.52,
+    "geojson_key": null
+  },
+  {
+    "name": "Oklahoma City, OK",
+    "slug": "oklahoma-city-ok",
+    "type": "city",
+    "area_sq_mi": 620,
+    "ri_ratio": 0.51,
+    "geojson_key": null
+  },
+  {
+    "name": "Riyadh, Saudi Arabia",
+    "slug": "riyadh-saudi-arabia",
+    "type": "city",
+    "area_sq_mi": 614,
+    "ri_ratio": 0.51,
+    "geojson_key": null
+  },
+  {
+    "name": "Bogotá, Colombia",
+    "slug": "bogotá-colombia",
+    "type": "city",
+    "area_sq_mi": 613,
+    "ri_ratio": 0.5,
+    "geojson_key": null
+  },
+  {
+    "name": "London, UK",
+    "slug": "london-uk",
+    "type": "city",
+    "area_sq_mi": 607,
+    "ri_ratio": 0.5,
+    "geojson_key": null
+  },
+  {
+    "name": "Bangkok, Thailand",
+    "slug": "bangkok-thailand",
+    "type": "city",
+    "area_sq_mi": 604,
+    "ri_ratio": 0.5,
+    "geojson_key": null
+  },
+  {
+    "name": "São Paulo, Brazil",
+    "slug": "são-paulo-brazil",
+    "type": "city",
+    "area_sq_mi": 587,
+    "ri_ratio": 0.48,
+    "geojson_key": null
+  },
+  {
+    "name": "Delhi, India",
+    "slug": "delhi-india",
+    "type": "city",
+    "area_sq_mi": 573,
+    "ri_ratio": 0.47,
+    "geojson_key": null
+  },
+  {
+    "name": "Mexico City, Mexico",
+    "slug": "mexico-city-mexico",
+    "type": "city",
+    "area_sq_mi": 571,
+    "ri_ratio": 0.47,
+    "geojson_key": null
+  },
+  {
+    "name": "Accra, Ghana",
+    "slug": "accra-ghana",
+    "type": "city",
+    "area_sq_mi": 539,
+    "ri_ratio": 0.44,
+    "geojson_key": null
+  },
+  {
+    "name": "Dar es Salaam, Tanzania",
+    "slug": "dar-es-salaam-tanzania",
+    "type": "city",
+    "area_sq_mi": 531,
+    "ri_ratio": 0.44,
+    "geojson_key": null
+  },
+  {
+    "name": "Nashville, TN",
+    "slug": "nashville-tn",
+    "type": "city",
+    "area_sq_mi": 526,
+    "ri_ratio": 0.43,
+    "geojson_key": null
+  },
+  {
+    "name": "Phoenix, AZ",
+    "slug": "phoenix-az",
+    "type": "city",
+    "area_sq_mi": 518,
+    "ri_ratio": 0.43,
+    "geojson_key": null
+  },
+  {
+    "name": "Los Angeles, CA",
+    "slug": "los-angeles-ca",
+    "type": "city",
+    "area_sq_mi": 503,
+    "ri_ratio": 0.41,
+    "geojson_key": null
+  },
+  {
+    "name": "Virginia Beach, VA",
+    "slug": "virginia-beach-va",
+    "type": "city",
+    "area_sq_mi": 497,
+    "ri_ratio": 0.41,
+    "geojson_key": null
+  },
+  {
+    "name": "Rome, Italy",
+    "slug": "rome-italy",
+    "type": "city",
+    "area_sq_mi": 496,
+    "ri_ratio": 0.41,
+    "geojson_key": null
+  },
+  {
+    "name": "San Antonio, TX",
+    "slug": "san-antonio-tx",
+    "type": "city",
+    "area_sq_mi": 461,
+    "ri_ratio": 0.38,
+    "geojson_key": null
+  },
+  {
+    "name": "Lagos, Nigeria",
+    "slug": "lagos-nigeria",
+    "type": "city",
+    "area_sq_mi": 452,
+    "ri_ratio": 0.37,
+    "geojson_key": null
+  },
+  {
+    "name": "Hong Kong",
+    "slug": "hong-kong",
+    "type": "city",
+    "area_sq_mi": 426,
+    "ri_ratio": 0.35,
+    "geojson_key": null
+  },
+  {
+    "name": "Dallas, TX",
+    "slug": "dallas-tx",
+    "type": "city",
+    "area_sq_mi": 386,
+    "ri_ratio": 0.32,
+    "geojson_key": null
+  },
+  {
+    "name": "Louisville, KY",
+    "slug": "louisville-ky",
+    "type": "city",
+    "area_sq_mi": 385,
+    "ri_ratio": 0.32,
+    "geojson_key": null
+  },
+  {
+    "name": "San Diego, CA",
+    "slug": "san-diego-ca",
+    "type": "city",
+    "area_sq_mi": 372,
+    "ri_ratio": 0.31,
+    "geojson_key": null
+  },
+  {
+    "name": "Indianapolis, IN",
+    "slug": "indianapolis-in",
+    "type": "city",
+    "area_sq_mi": 368,
+    "ri_ratio": 0.3,
+    "geojson_key": null
+  },
+  {
+    "name": "Fort Worth, TX",
+    "slug": "fort-worth-tx",
+    "type": "city",
+    "area_sq_mi": 349,
+    "ri_ratio": 0.29,
+    "geojson_key": null
+  },
+  {
+    "name": "Berlin, Germany",
+    "slug": "berlin-germany",
+    "type": "city",
+    "area_sq_mi": 344,
+    "ri_ratio": 0.28,
+    "geojson_key": null
+  },
+  {
+    "name": "Kyiv, Ukraine",
+    "slug": "kyiv-ukraine",
+    "type": "city",
+    "area_sq_mi": 325,
+    "ri_ratio": 0.27,
+    "geojson_key": null
+  },
+  {
+    "name": "Austin, TX",
+    "slug": "austin-tx",
+    "type": "city",
+    "area_sq_mi": 320,
+    "ri_ratio": 0.26,
+    "geojson_key": null
+  },
+  {
+    "name": "Memphis, TN",
+    "slug": "memphis-tn",
+    "type": "city",
+    "area_sq_mi": 315,
+    "ri_ratio": 0.26,
+    "geojson_key": null
+  },
+  {
+    "name": "Kansas City, MO",
+    "slug": "kansas-city-mo",
+    "type": "city",
+    "area_sq_mi": 315,
+    "ri_ratio": 0.26,
+    "geojson_key": null
+  },
+  {
+    "name": "Charlotte, NC",
+    "slug": "charlotte-nc",
+    "type": "city",
+    "area_sq_mi": 308,
+    "ri_ratio": 0.25,
+    "geojson_key": null
+  },
+  {
+    "name": "New York City, NY",
+    "slug": "new-york-city-ny",
+    "type": "city",
+    "area_sq_mi": 303,
+    "ri_ratio": 0.25,
+    "geojson_key": null
+  },
+  {
+    "name": "Nairobi, Kenya",
+    "slug": "nairobi-kenya",
+    "type": "city",
+    "area_sq_mi": 267,
+    "ri_ratio": 0.22,
+    "geojson_key": null
+  },
+  {
+    "name": "El Paso, TX",
+    "slug": "el-paso-tx",
+    "type": "city",
+    "area_sq_mi": 255,
+    "ri_ratio": 0.21,
+    "geojson_key": null
+  },
+  {
+    "name": "Tehran, Iran",
+    "slug": "tehran-iran",
+    "type": "city",
+    "area_sq_mi": 255,
+    "ri_ratio": 0.21,
+    "geojson_key": null
+  },
+  {
+    "name": "Jakarta, Indonesia",
+    "slug": "jakarta-indonesia",
+    "type": "city",
+    "area_sq_mi": 255,
+    "ri_ratio": 0.21,
+    "geojson_key": null
+  },
+  {
+    "name": "Toronto, Canada",
+    "slug": "toronto-canada",
+    "type": "city",
+    "area_sq_mi": 243,
+    "ri_ratio": 0.2,
+    "geojson_key": null
+  },
+  {
+    "name": "Chicago, IL",
+    "slug": "chicago-il",
+    "type": "city",
+    "area_sq_mi": 234,
+    "ri_ratio": 0.19,
+    "geojson_key": null
+  },
+  {
+    "name": "Seoul, South Korea",
+    "slug": "seoul-south-korea",
+    "type": "city",
+    "area_sq_mi": 234,
+    "ri_ratio": 0.19,
+    "geojson_key": null
+  },
+  {
+    "name": "Madrid, Spain",
+    "slug": "madrid-spain",
+    "type": "city",
+    "area_sq_mi": 234,
+    "ri_ratio": 0.19,
+    "geojson_key": null
+  },
+  {
+    "name": "Mumbai, India",
+    "slug": "mumbai-india",
+    "type": "city",
+    "area_sq_mi": 233,
+    "ri_ratio": 0.19,
+    "geojson_key": null
+  },
+  {
+    "name": "Tucson, AZ",
+    "slug": "tucson-az",
+    "type": "city",
+    "area_sq_mi": 228,
+    "ri_ratio": 0.19,
+    "geojson_key": null
+  },
+  {
+    "name": "Columbus, OH",
+    "slug": "columbus-oh",
+    "type": "city",
+    "area_sq_mi": 226,
+    "ri_ratio": 0.19,
+    "geojson_key": null
+  },
+  {
+    "name": "Addis Ababa, Ethiopia",
+    "slug": "addis-ababa-ethiopia",
+    "type": "city",
+    "area_sq_mi": 211,
+    "ri_ratio": 0.17,
+    "geojson_key": null
+  },
+  {
+    "name": "Budapest, Hungary",
+    "slug": "budapest-hungary",
+    "type": "city",
+    "area_sq_mi": 203,
+    "ri_ratio": 0.17,
+    "geojson_key": null
+  },
+  {
+    "name": "Albuquerque, NM",
+    "slug": "albuquerque-nm",
+    "type": "city",
+    "area_sq_mi": 188,
+    "ri_ratio": 0.15,
+    "geojson_key": null
+  },
+  {
+    "name": "Stockholm, Sweden",
+    "slug": "stockholm-sweden",
+    "type": "city",
+    "area_sq_mi": 188,
+    "ri_ratio": 0.15,
+    "geojson_key": null
+  },
+  {
+    "name": "Colorado Springs, CO",
+    "slug": "colorado-springs-co",
+    "type": "city",
+    "area_sq_mi": 186,
+    "ri_ratio": 0.15,
+    "geojson_key": null
+  },
+  {
+    "name": "San Jose, CA",
+    "slug": "san-jose-ca",
+    "type": "city",
+    "area_sq_mi": 178,
+    "ri_ratio": 0.15,
+    "geojson_key": null
+  },
+  {
+    "name": "Oslo, Norway",
+    "slug": "oslo-norway",
+    "type": "city",
+    "area_sq_mi": 175,
+    "ri_ratio": 0.14,
+    "geojson_key": null
+  },
+  {
+    "name": "Cairo, Egypt",
+    "slug": "cairo-egypt",
+    "type": "city",
+    "area_sq_mi": 175,
+    "ri_ratio": 0.14,
+    "geojson_key": null
+  },
+  {
+    "name": "Tampa, FL",
+    "slug": "tampa-fl",
+    "type": "city",
+    "area_sq_mi": 171,
+    "ri_ratio": 0.14,
+    "geojson_key": null
+  },
+  {
+    "name": "New Orleans, LA",
+    "slug": "new-orleans-la",
+    "type": "city",
+    "area_sq_mi": 169,
+    "ri_ratio": 0.14,
+    "geojson_key": null
+  },
+  {
+    "name": "Athens, Greece",
+    "slug": "athens-greece",
+    "type": "city",
+    "area_sq_mi": 165,
+    "ri_ratio": 0.14,
+    "geojson_key": null
+  },
+  {
+    "name": "Vienna, Austria",
+    "slug": "vienna-austria",
+    "type": "city",
+    "area_sq_mi": 160,
+    "ri_ratio": 0.13,
+    "geojson_key": null
+  },
+  {
+    "name": "Denver, CO",
+    "slug": "denver-co",
+    "type": "city",
+    "area_sq_mi": 153,
+    "ri_ratio": 0.13,
+    "geojson_key": null
+  },
+  {
+    "name": "Raleigh, NC",
+    "slug": "raleigh-nc",
+    "type": "city",
+    "area_sq_mi": 148,
+    "ri_ratio": 0.12,
+    "geojson_key": null
+  },
+  {
+    "name": "Omaha, NE",
+    "slug": "omaha-ne",
+    "type": "city",
+    "area_sq_mi": 146,
+    "ri_ratio": 0.12,
+    "geojson_key": null
+  },
+  {
+    "name": "Detroit, MI",
+    "slug": "detroit-mi",
+    "type": "city",
+    "area_sq_mi": 143,
+    "ri_ratio": 0.12,
+    "geojson_key": null
+  },
+  {
+    "name": "Philadelphia, PA",
+    "slug": "philadelphia-pa",
+    "type": "city",
+    "area_sq_mi": 143,
+    "ri_ratio": 0.12,
+    "geojson_key": null
+  },
+  {
+    "name": "Seattle, WA",
+    "slug": "seattle-wa",
+    "type": "city",
+    "area_sq_mi": 143,
+    "ri_ratio": 0.12,
+    "geojson_key": null
+  },
+  {
+    "name": "Montreal, Canada",
+    "slug": "montreal-canada",
+    "type": "city",
+    "area_sq_mi": 141,
+    "ri_ratio": 0.12,
+    "geojson_key": null
+  },
+  {
+    "name": "Casablanca, Morocco",
+    "slug": "casablanca-morocco",
+    "type": "city",
+    "area_sq_mi": 140,
+    "ri_ratio": 0.12,
+    "geojson_key": null
+  },
+  {
+    "name": "Las Vegas, NV",
+    "slug": "las-vegas-nv",
+    "type": "city",
+    "area_sq_mi": 136,
+    "ri_ratio": 0.11,
+    "geojson_key": null
+  },
+  {
+    "name": "Atlanta, GA",
+    "slug": "atlanta-ga",
+    "type": "city",
+    "area_sq_mi": 133,
+    "ri_ratio": 0.11,
+    "geojson_key": null
+  },
+  {
+    "name": "Portland, OR",
+    "slug": "portland-or",
+    "type": "city",
+    "area_sq_mi": 133,
+    "ri_ratio": 0.11,
+    "geojson_key": null
+  },
+  {
+    "name": "Warsaw, Poland",
+    "slug": "warsaw-poland",
+    "type": "city",
+    "area_sq_mi": 127,
+    "ri_ratio": 0.1,
+    "geojson_key": null
+  },
+  {
+    "name": "Dhaka, Bangladesh",
+    "slug": "dhaka-bangladesh",
+    "type": "city",
+    "area_sq_mi": 118,
+    "ri_ratio": 0.1,
+    "geojson_key": null
+  },
+  {
+    "name": "Prague, Czech Republic",
+    "slug": "prague-czech-republic",
+    "type": "city",
+    "area_sq_mi": 116,
+    "ri_ratio": 0.1,
+    "geojson_key": null
+  },
+  {
+    "name": "Helsinki, Finland",
+    "slug": "helsinki-finland",
+    "type": "city",
+    "area_sq_mi": 115,
+    "ri_ratio": 0.09,
+    "geojson_key": null
+  },
+  {
+    "name": "Salt Lake City, UT",
+    "slug": "salt-lake-city-ut",
+    "type": "city",
+    "area_sq_mi": 110,
+    "ri_ratio": 0.09,
+    "geojson_key": null
+  },
+  {
+    "name": "Taipei, Taiwan",
+    "slug": "taipei-taiwan",
+    "type": "city",
+    "area_sq_mi": 105,
+    "ri_ratio": 0.09,
+    "geojson_key": null
+  },
+  {
+    "name": "Sacramento, CA",
+    "slug": "sacramento-ca",
+    "type": "city",
+    "area_sq_mi": 100,
+    "ri_ratio": 0.08,
+    "geojson_key": null
+  },
+  {
+    "name": "Milwaukee, WI",
+    "slug": "milwaukee-wi",
+    "type": "city",
+    "area_sq_mi": 96,
+    "ri_ratio": 0.08,
+    "geojson_key": null
+  },
+  {
+    "name": "Kuala Lumpur, Malaysia",
+    "slug": "kuala-lumpur-malaysia",
+    "type": "city",
+    "area_sq_mi": 94,
+    "ri_ratio": 0.08,
+    "geojson_key": null
+  },
+  {
+    "name": "Baltimore, MD",
+    "slug": "baltimore-md",
+    "type": "city",
+    "area_sq_mi": 92,
+    "ri_ratio": 0.08,
+    "geojson_key": null
+  },
+  {
+    "name": "Osaka, Japan",
+    "slug": "osaka-japan",
+    "type": "city",
+    "area_sq_mi": 87,
+    "ri_ratio": 0.07,
+    "geojson_key": null
+  },
+  {
+    "name": "Amsterdam, Netherlands",
+    "slug": "amsterdam-netherlands",
+    "type": "city",
+    "area_sq_mi": 85,
+    "ri_ratio": 0.07,
+    "geojson_key": null
+  },
+  {
+    "name": "Cleveland, OH",
+    "slug": "cleveland-oh",
+    "type": "city",
+    "area_sq_mi": 82,
+    "ri_ratio": 0.07,
+    "geojson_key": null
+  },
+  {
+    "name": "Buenos Aires, Argentina",
+    "slug": "buenos-aires-argentina",
+    "type": "city",
+    "area_sq_mi": 78,
+    "ri_ratio": 0.06,
+    "geojson_key": null
+  },
+  {
+    "name": "Cincinnati, OH",
+    "slug": "cincinnati-oh",
+    "type": "city",
+    "area_sq_mi": 77,
+    "ri_ratio": 0.06,
+    "geojson_key": null
+  },
+  {
+    "name": "Washington DC",
+    "slug": "washington-dc",
+    "type": "city",
+    "area_sq_mi": 68,
+    "ri_ratio": 0.06,
+    "geojson_key": null
+  },
+  {
+    "name": "Doha, Qatar",
+    "slug": "doha-qatar",
+    "type": "city",
+    "area_sq_mi": 68,
+    "ri_ratio": 0.06,
+    "geojson_key": null
+  },
+  {
+    "name": "St. Louis, MO",
+    "slug": "st-louis-mo",
+    "type": "city",
+    "area_sq_mi": 66,
+    "ri_ratio": 0.05,
+    "geojson_key": null
+  },
+  {
+    "name": "Brussels, Belgium",
+    "slug": "brussels-belgium",
+    "type": "city",
+    "area_sq_mi": 62,
+    "ri_ratio": 0.05,
+    "geojson_key": null
+  },
+  {
+    "name": "Minneapolis, MN",
+    "slug": "minneapolis-mn",
+    "type": "city",
+    "area_sq_mi": 58,
+    "ri_ratio": 0.05,
+    "geojson_key": null
+  },
+  {
+    "name": "Pittsburgh, PA",
+    "slug": "pittsburgh-pa",
+    "type": "city",
+    "area_sq_mi": 58,
+    "ri_ratio": 0.05,
+    "geojson_key": null
+  },
+  {
+    "name": "Miami, FL",
+    "slug": "miami-fl",
+    "type": "city",
+    "area_sq_mi": 55,
+    "ri_ratio": 0.05,
+    "geojson_key": null
+  },
+  {
+    "name": "Boston, MA",
+    "slug": "boston-ma",
+    "type": "city",
+    "area_sq_mi": 48,
+    "ri_ratio": 0.04,
+    "geojson_key": null
+  },
+  {
+    "name": "San Francisco, CA",
+    "slug": "san-francisco-ca",
+    "type": "city",
+    "area_sq_mi": 47,
+    "ri_ratio": 0.04,
+    "geojson_key": null
+  },
+  {
+    "name": "Dublin, Ireland",
+    "slug": "dublin-ireland",
+    "type": "city",
+    "area_sq_mi": 45,
+    "ri_ratio": 0.04,
+    "geojson_key": null
+  },
+  {
+    "name": "Vancouver, Canada",
+    "slug": "vancouver-canada",
+    "type": "city",
+    "area_sq_mi": 44,
+    "ri_ratio": 0.04,
+    "geojson_key": null
+  },
+  {
+    "name": "Paris, France",
+    "slug": "paris-france",
+    "type": "city",
+    "area_sq_mi": 41,
+    "ri_ratio": 0.03,
+    "geojson_key": null
+  },
+  {
+    "name": "Barcelona, Spain",
+    "slug": "barcelona-spain",
+    "type": "city",
+    "area_sq_mi": 39,
+    "ri_ratio": 0.03,
+    "geojson_key": null
+  },
+  {
+    "name": "Lisbon, Portugal",
+    "slug": "lisbon-portugal",
+    "type": "city",
+    "area_sq_mi": 34,
+    "ri_ratio": 0.03,
+    "geojson_key": null
+  },
+  {
+    "name": "Copenhagen, Denmark",
+    "slug": "copenhagen-denmark",
+    "type": "city",
+    "area_sq_mi": 34,
+    "ri_ratio": 0.03,
+    "geojson_key": null
+  },
+  {
+    "name": "Zurich, Switzerland",
+    "slug": "zurich-switzerland",
+    "type": "city",
+    "area_sq_mi": 34,
+    "ri_ratio": 0.03,
+    "geojson_key": null
+  },
+  {
+    "name": "Manila, Philippines",
+    "slug": "manila-philippines",
+    "type": "city",
+    "area_sq_mi": 15,
+    "ri_ratio": 0.01,
+    "geojson_key": null
+  }
+]
