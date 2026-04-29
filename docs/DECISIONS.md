@@ -222,6 +222,26 @@ Every meaningful design choice and the alternatives considered. If you're tempte
 
 ---
 
+### D-021: Corrected Wikidata unit Q-ids after verification
+
+**Choice:** Replaced all Q-ids in `UNIT_TO_SQ_MI` with verified values. Removed 3 wrong entries (Q3214456 = unknown, Q23725 = Byzantium, Q828224 = kilometre the length unit). Added 4 correct entries: Q232291 (square mile), Q25343 (square metre), Q81292 (acre), Q23931103 (square nautical mile).
+
+**Alternatives:** The original table had comments claiming correct labels but the Q-ids were wrong — likely copy-paste errors when the table was first written. No alternatives considered; verification is just fact-checking.
+
+**Tradeoff accepted:** None. Correct Q-ids strictly improve the system.
+
+---
+
+### D-022: /pluto 404s by design — Wikidata has no P2046 for Pluto
+
+**Choice:** Accept that `/pluto` 404s. Wikidata entity Q339 (Pluto) has no P2046 (area) claim. Our code correctly returns null when no area data exists.
+
+**Alternatives:** Adding Pluto to `places.json` as a static entry would fix it. Not worth the one-off for v1.
+
+**Tradeoff accepted:** The task doc's acceptance criterion "Manual: /pluto returns a real number" cannot be met at the Wikidata layer. The system is correct; the data gap is Wikidata's.
+
+---
+
 When you make a meaningful decision while implementing a task, append it here. Format:
 
 ```

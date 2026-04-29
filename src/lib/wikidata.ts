@@ -26,17 +26,19 @@ const TIMEOUT_MS = 3000;
 const CACHE_TTL_SEC = 60 * 60 * 24 * 30; // 30 days
 
 // Wikidata is strict about User-Agent. Identify the app + a contact path.
-const UA = "HowManyRhodeIslands/0.1 (https://github.com/your-handle/how-many-rhode-islands)";
+const UA = "HowManyRhodeIslands/0.1 (https://github.com/eliaseberman/how-many-rhode-islands)";
 
 // ─── Unit conversion table ───────────────────────────────────────────
 // Wikidata stores areas with a unit URI. Convert each known unit to sq mi.
+// Q-ids verified against Wikidata entity labels — see DECISIONS.md D-021.
 // Unknown units return null (better to 404 than display the wrong number).
 const UNIT_TO_SQ_MI: Record<string, number> = {
-  Q712226:  0.386102,    // square kilometre
-  Q3214456: 1.0,         // square mile
-  Q23725:   0.00386102,  // hectare
-  Q828224:  3.86102e-7,  // square metre
-  Q35852:   0.00156,     // acre
+  Q712226:   0.386102,    // square kilometre
+  Q232291:   1.0,         // square mile
+  Q35852:    0.00386102,  // hectare
+  Q25343:    3.86102e-7,  // square metre
+  Q81292:    0.0015625,   // acre
+  Q23931103: 1.32348,     // square nautical mile
 };
 
 function convertToSqMi(amount: number, unitUri: string): number | null {
