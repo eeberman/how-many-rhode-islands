@@ -33,7 +33,7 @@ npm run build:geo
 | Visual: national parks | ✅ | `data/geo/national-parks.json` | — |
 | Visual: cities | ✅ | `src/lib/osm.ts` + `getFeatureAsync()` in `geo.ts` | — |
 | Long-tail (anything not in `places.json`) | ✅ | `src/lib/wikidata.ts` + `[place]/page.tsx` | — |
-| OG image / share card | 🟡 default Next.js metadata | `[place]/page.tsx` `generateMetadata()` | **Task 04** |
+| OG image / share card | ✅ | `src/app/[place]/opengraph-image.tsx` + `ShareButton` | — |
 | Deployed to Vercel | 🟡 not yet | — | **Task 05** |
 
 Legend: ✅ done · 🟢 wired but needs validation · 🟡 stubbed · 🔴 broken (not currently any).

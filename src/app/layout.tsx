@@ -17,6 +17,11 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_VERCEL_URL
+      ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
+      : "http://localhost:3000"
+  ),
   title: "How Many Rhode Islands",
   description: "How many Rhode Islands fit inside that?",
 };

@@ -10,6 +10,7 @@ import {
 import { fetchPlaceFromWikidata } from "@/lib/wikidata";
 import { getFeatureAsync, getRhodeIslandFeature } from "@/lib/geo";
 import ScaleCompare from "@/components/ScaleCompare";
+import ShareButton from "@/components/ShareButton";
 
 interface PageProps {
   params: Promise<{ place: string }>;
@@ -45,6 +46,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: `${headline} — How Many Rhode Islands`,
     description: headline,
     openGraph: {
+      title: headline,
+      description: `${place.name} is ${place.area_sq_mi.toLocaleString()} sq mi.`,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
       title: headline,
       description: `${place.name} is ${place.area_sq_mi.toLocaleString()} sq mi.`,
     },
@@ -119,6 +126,12 @@ export default async function PlacePage({ params }: PageProps) {
             Rhode Island: {RI_AREA_SQ_MI.toLocaleString()} sq mi
           </div>
         </div>
+
+        <ShareButton
+          title={isBigger
+            ? `${ratio} Rhode Islands fit inside ${place.name}`
+            : `Rhode Island is ${ratio}× bigger than ${place.name}`}
+        />
       </div>
     </main>
   );
