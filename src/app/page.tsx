@@ -1,4 +1,5 @@
 import Link from "next/link";
+import RandomButton from "@/components/RandomButton";
 import SearchBar from "@/components/SearchBar";
 
 const SUGGESTIONS = [
@@ -25,6 +26,7 @@ export default function HomePage() {
         </div>
 
         <SearchBar />
+        <RandomButton />
 
         <div className="mt-6 flex flex-wrap justify-center gap-2 max-w-md">
           {SUGGESTIONS.map((s) => (

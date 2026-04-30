@@ -12,6 +12,7 @@ import { getFeatureAsync, getRhodeIslandFeature } from "@/lib/geo";
 import ScaleCompare from "@/components/ScaleCompare";
 import ShareButton from "@/components/ShareButton";
 import SearchBar from "@/components/SearchBar";
+import RandomButton from "@/components/RandomButton";
 
 interface PageProps {
   params: Promise<{ place: string }>;
@@ -42,7 +43,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const isBigger = place.ri_ratio >= 1;
   const headline = isBigger
     ? `${formatRatio(place.ri_ratio)} Rhode Islands fit inside ${place.name}`
-    : `Rhode Island is ${formatRatio(1 / place.ri_ratio)}× bigger than ${place.name}`;
+    : `${formatRatio(1 / place.ri_ratio)} ${place.name} fit inside Rhode Island`;
   return {
     title: `${headline} — How Many Rhode Islands`,
     description: headline,
@@ -98,18 +99,14 @@ export default async function PlacePage({ params }: PageProps) {
             </>
           ) : (
             <>
-              <div className="font-display text-3xl sm:text-4xl text-bone">
-                Rhode Island
+              <div className="font-display text-7xl sm:text-8xl font-bold text-ocean-bright leading-none tracking-tight">
+                {ratio}
               </div>
-              <div className="mt-1 font-body text-bone/80 text-lg">
-                is{" "}
-                <span className="text-ocean-bright font-bold text-2xl">
-                  {ratio}×
-                </span>{" "}
-                bigger than
+              <div className="mt-3 font-body text-bone/80 text-lg">
+                {place.name} fit inside
               </div>
               <div className="mt-1 font-display text-3xl sm:text-4xl text-bone">
-                {place.name}
+                Rhode Island
               </div>
             </>
           )}
@@ -131,11 +128,14 @@ export default async function PlacePage({ params }: PageProps) {
         <ShareButton
           title={isBigger
             ? `${ratio} Rhode Islands fit inside ${place.name}`
-            : `Rhode Island is ${ratio}× bigger than ${place.name}`}
+            : `${ratio} ${place.name} fit inside Rhode Island`}
         />
 
         <div className="mt-10 w-full">
           <SearchBar />
+          <div className="flex justify-center">
+            <RandomButton />
+          </div>
         </div>
       </div>
     </main>

@@ -65,6 +65,13 @@ export function searchPlaces(query: string, limit = 8): Place[] {
 }
 
 /**
+ * Pick one static place uniformly at random.
+ */
+export function getRandomPlace(): Place {
+  return PLACES[Math.floor(Math.random() * PLACES.length)];
+}
+
+/**
  * Convert a free-text query into a slug for routing.
  * Used when the user picks "Search [X] anyway" — that route
  * triggers the live Wikidata fallback in [place]/page.tsx.

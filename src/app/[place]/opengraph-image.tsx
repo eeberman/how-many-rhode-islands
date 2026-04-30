@@ -122,22 +122,17 @@ export default async function Image({ params }: { params: Promise<{ place: strin
             <>
               <span
                 style={{
-                  fontSize: 56,
-                  color: BONE,
+                  fontSize: 140,
+                  fontWeight: 800,
+                  color: OCEAN_BRIGHT,
+                  lineHeight: 1,
                   fontFamily: "serif",
-                  fontStyle: "italic",
                 }}
               >
-                Rhode Island
+                {ratio}
               </span>
-              <span style={{ fontSize: 32, color: `${BONE}CC`, marginTop: 12 }}>
-                {"is "}
-                <span
-                  style={{ color: OCEAN_BRIGHT, fontSize: 96, fontWeight: 800 }}
-                >
-                  {ratio}×
-                </span>
-                {" bigger than"}
+              <span style={{ fontSize: 32, color: BONE + "CC", marginTop: 16 }}>
+                {place.name} fit inside
               </span>
               <span
                 style={{
@@ -148,7 +143,7 @@ export default async function Image({ params }: { params: Promise<{ place: strin
                   fontStyle: "italic",
                 }}
               >
-                {place.name}
+                Rhode Island
               </span>
             </>
           )}
