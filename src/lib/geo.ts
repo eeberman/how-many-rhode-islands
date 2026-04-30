@@ -1,8 +1,9 @@
 import { geoMercator, geoPath } from "d3-geo";
-import type { Feature, Geometry } from "geojson";
+import type { Feature, GeoJsonProperties, Geometry, MultiPolygon, Position } from "geojson";
 import countries from "../../data/geo/countries.json";
 import usStates from "../../data/geo/us-states.json";
 import nationalParks from "../../data/geo/national-parks.json";
+import cities from "../../data/geo/cities.json";
 import type { Place, PlaceType } from "./places";
 import { fetchOSMBoundary } from "./osm";
 
@@ -11,6 +12,7 @@ type FeatureMap = Record<string, Feature<Geometry, { name: string }>>;
 const COUNTRIES = countries as unknown as FeatureMap;
 const US_STATES = usStates as unknown as FeatureMap;
 const NATIONAL_PARKS = nationalParks as unknown as FeatureMap;
+const CITIES = cities as unknown as FeatureMap;
 
 /**
  * Look up a GeoJSON feature for a place by type + key.
@@ -25,7 +27,8 @@ export function getFeature(
   if (type === "country") return COUNTRIES[geojsonKey] ?? null;
   if (type === "us_state") return US_STATES[geojsonKey] ?? null;
   if (type === "national_park") return NATIONAL_PARKS[geojsonKey] ?? null;
-  return null; // cities — use getFeatureAsync instead
+  if (type === "city") return CITIES[geojsonKey] ?? null;
+  return null;
 }
 
 /**
@@ -99,6 +102,114 @@ function antimeridianCenter(feature: Feature<Geometry, unknown>): number {
   return center > 180 ? center - 360 : center;
 }
 
+interface PolygonInfo {
+  coordinates: Position[][];
+  minLon: number;
+  maxLon: number;
+  minLat: number;
+  maxLat: number;
+  area: number;
+}
+
+function polygonBounds(coordinates: Position[][]): PolygonInfo {
+  const ring = coordinates[0] ?? [];
+  let minLon = Infinity;
+  let maxLon = -Infinity;
+  let minLat = Infinity;
+  let maxLat = -Infinity;
+
+  for (const [lon, lat] of ring) {
+    if (lon < minLon) minLon = lon;
+    if (lon > maxLon) maxLon = lon;
+    if (lat < minLat) minLat = lat;
+    if (lat > maxLat) maxLat = lat;
+  }
+
+  const lonSpan = Math.max(0, maxLon - minLon);
+  const latSpan = Math.max(0, maxLat - minLat);
+  return {
+    coordinates,
+    minLon,
+    maxLon,
+    minLat,
+    maxLat,
+    area: lonSpan * latSpan,
+  };
+}
+
+function containsBounds(outer: PolygonInfo, inner: PolygonInfo): boolean {
+  return (
+    inner.minLon >= outer.minLon &&
+    inner.maxLon <= outer.maxLon &&
+    inner.minLat >= outer.minLat &&
+    inner.maxLat <= outer.maxLat
+  );
+}
+
+function expandBounds(bounds: PolygonInfo, amount: number): PolygonInfo {
+  return {
+    ...bounds,
+    minLon: bounds.minLon - amount,
+    maxLon: bounds.maxLon + amount,
+    minLat: bounds.minLat - amount,
+    maxLat: bounds.maxLat + amount,
+  };
+}
+
+/**
+ * Fit the primary landmass cluster for countries whose tiny remote territories
+ * make the full bounds mostly ocean. Archipelagos still use their full bounds:
+ * this only activates when one polygon dominates and remote outliers stretch
+ * the overall envelope.
+ */
+function fitFeature(feature: Feature<Geometry, GeoJsonProperties>): Feature<Geometry, GeoJsonProperties> {
+  if (feature.geometry.type !== "MultiPolygon") return feature;
+
+  const polygons = feature.geometry.coordinates;
+  if (polygons.length < 2) return feature;
+
+  const infos = polygons.map((polygon) => polygonBounds(polygon));
+  const totalArea = infos.reduce((sum, info) => sum + info.area, 0);
+  if (totalArea === 0) return feature;
+
+  const largest = infos.reduce((best, info) => (info.area > best.area ? info : best), infos[0]);
+  const largestShare = largest.area / totalArea;
+  const full = infos.reduce<PolygonInfo>(
+    (bounds, info) => ({
+      ...bounds,
+      minLon: Math.min(bounds.minLon, info.minLon),
+      maxLon: Math.max(bounds.maxLon, info.maxLon),
+      minLat: Math.min(bounds.minLat, info.minLat),
+      maxLat: Math.max(bounds.maxLat, info.maxLat),
+    }),
+    { ...largest }
+  );
+
+  const largestLonSpan = Math.max(0.001, largest.maxLon - largest.minLon);
+  const largestLatSpan = Math.max(0.001, largest.maxLat - largest.minLat);
+  const hasRemoteOutliers =
+    (full.maxLon - full.minLon) / largestLonSpan > 3 ||
+    (full.maxLat - full.minLat) / largestLatSpan > 3;
+
+  if (largestShare < 0.8 || !hasRemoteOutliers) return feature;
+
+  const padding = Math.max(largestLonSpan, largestLatSpan) * 0.5;
+  const clusterBounds = expandBounds(largest, padding);
+  const cluster = infos
+    .filter((info) => containsBounds(clusterBounds, info))
+    .map((info) => info.coordinates);
+
+  if (cluster.length === 0 || cluster.length === polygons.length) return feature;
+
+  return {
+    ...feature,
+    geometry: {
+      type: "MultiPolygon",
+      coordinates: cluster,
+    } satisfies MultiPolygon,
+  };
+}
+
 /**
  * Project a GeoJSON feature to fit a square box.
  * Returns the SVG path `d` attribute string.
@@ -115,10 +226,13 @@ export function projectToBox(
   feature: Feature<Geometry, { name: string }>,
   boxSize: number
 ): string {
-  const center = antimeridianCenter(feature);
+  const boundsFeature = fitFeature(feature);
+  const center = antimeridianCenter(boundsFeature);
   // rotate([center, 0]) makes d3-geo project lon as (lon - center),
   // centering the feature at 0° and keeping it away from the ±180° clip boundary.
-  const projection = geoMercator().rotate([-center, 0]).fitSize([boxSize, boxSize], feature);
+  const projection = geoMercator()
+    .rotate([-center, 0])
+    .fitSize([boxSize, boxSize], boundsFeature);
   const path = geoPath(projection);
   return path(feature) ?? "";
 }

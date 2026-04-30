@@ -2604,7 +2604,7 @@
     "type": "city",
     "area_sq_mi": 847,
     "ri_ratio": 0.7,
-    "geojson_key": null
+    "geojson_key": "tokyo-japan"
   },
   {
     "name": "Houston, TX",
@@ -2652,7 +2652,7 @@
     "type": "city",
     "area_sq_mi": 607,
     "ri_ratio": 0.5,
-    "geojson_key": null
+    "geojson_key": "london-uk"
   },
   {
     "name": "Bangkok, Thailand",
@@ -2860,7 +2860,7 @@
     "type": "city",
     "area_sq_mi": 303,
     "ri_ratio": 0.25,
-    "geojson_key": null
+    "geojson_key": "new-york-city-ny"
   },
   {
     "name": "Nairobi, Kenya",
@@ -3348,7 +3348,7 @@
     "type": "city",
     "area_sq_mi": 41,
     "ri_ratio": 0.03,
-    "geojson_key": null
+    "geojson_key": "paris-france"
   },
   {
     "name": "Barcelona, Spain",

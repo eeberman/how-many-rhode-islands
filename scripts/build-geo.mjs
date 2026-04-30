@@ -10,7 +10,8 @@
  *   4. Updates data/places.json with `geojson_key` per entry
  *
  * What it does NOT do:
- *   - City boundaries: cities use OSM Nominatim live fetch (wired in Task 03).
+ *   - Fetch city boundaries. Curated city boundaries in data/geo/cities.json
+ *     are preserved by key.
  *
  * Re-run this whenever you want fresh boundary data, or when you add new entries
  * to data/places.json that need geojson_key set.
@@ -140,6 +141,8 @@ try {
 // ─── Read places.json and assign geojson_keys ────────────────────────
 log("Updating places.json with geojson_keys…");
 const places = JSON.parse(readFileSync("data/places.json", "utf8"));
+const existingCountries = JSON.parse(readFileSync("data/geo/countries.json", "utf8"));
+const existingCities = JSON.parse(readFileSync("data/geo/cities.json", "utf8"));
 
 const countriesOut = {};   // ISO numeric id → GeoJSON feature
 const statesOut = {};      // FIPS code → GeoJSON feature
@@ -149,6 +152,12 @@ const missed = { country: [], us_state: [], national_park: [] };
 
 for (const p of places) {
   if (p.type === "country") {
+    if (p.geojson_key && !/^\d+$/.test(p.geojson_key) && existingCountries[p.geojson_key]) {
+      countriesOut[p.geojson_key] = existingCountries[p.geojson_key];
+      matched.country++;
+      continue;
+    }
+
     const lookupName = COUNTRY_NAME_OVERRIDES[p.name] ?? p.name;
     const f = countriesByName.get(normalizeName(lookupName));
     if (f) {
@@ -195,9 +204,15 @@ for (const p of places) {
       p.geojson_key = null;
       missed.national_park.push(p.name);
     }
-  } else {
-    // city: runtime OSM fetch in Task 03
-    p.geojson_key = null;
+  } else if (p.type === "city") {
+    if (p.geojson_key && existingCities[p.geojson_key]) {
+      continue;
+    }
+    if (existingCities[p.slug]) {
+      p.geojson_key = p.slug;
+    } else {
+      p.geojson_key = null;
+    }
   }
 }
 

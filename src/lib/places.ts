@@ -8,8 +8,8 @@ export interface Place {
   type: PlaceType;
   area_sq_mi: number;
   ri_ratio: number;
-  /** Key into bundled GeoJSON (data/geo/*.json). null/undefined for cities,
-   *  national parks, and a few tiny island nations without bundled geometry. */
+  /** Key into bundled GeoJSON (data/geo/*.json). null/undefined when no
+   *  bundled geometry is available. */
   geojson_key?: string | null;
 }
 

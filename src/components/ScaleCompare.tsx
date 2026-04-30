@@ -14,7 +14,7 @@
  *     so it sits centered inside the bigger shape at its true relative size.
  *
  * Falls back to a placeholder rounded square for places without GeoJSON
- * (some cities, and a few tiny island nations like Tuvalu). The math
+ * (long-tail cities, and a few tiny island nations like Tuvalu). The math
  * and layout are identical — only the path shapes differ.
  */
 
@@ -157,8 +157,8 @@ function ShapeOrPlaceholder({
     );
   }
 
-  // Placeholder: rounded square. Used for cities, national parks, and any
-  // unmatched static entries (e.g. Tuvalu). Same coordinate space as
+  // Placeholder: rounded square. Used for unmatched static entries
+  // (long-tail cities, Tuvalu, etc.). Same coordinate space as
   // projectToBox output: (0,0) to (box, box).
   return (
     <rect
