@@ -1335,6 +1335,14 @@
     "geojson_key": "096"
   },
   {
+    "name": "West Bank",
+    "slug": "west-bank",
+    "type": "country",
+    "area_sq_mi": 2183,
+    "ri_ratio": 1.8,
+    "geojson_key": "west-bank"
+  },
+  {
     "name": "Trinidad and Tobago",
     "slug": "trinidad-and-tobago",
     "type": "country",
@@ -1493,6 +1501,14 @@
     "area_sq_mi": 150,
     "ri_ratio": 0.12,
     "geojson_key": "670"
+  },
+  {
+    "name": "Gaza",
+    "slug": "gaza",
+    "type": "country",
+    "area_sq_mi": 141,
+    "ri_ratio": 0.12,
+    "geojson_key": "gaza"
   },
   {
     "name": "Grenada",
