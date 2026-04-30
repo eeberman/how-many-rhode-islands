@@ -1,5 +1,77 @@
 [
   {
+    "name": "Jupiter",
+    "slug": "jupiter",
+    "type": "celestial",
+    "area_sq_mi": 23710000000,
+    "ri_ratio": 19530477.76,
+    "geojson_key": "jupiter"
+  },
+  {
+    "name": "Saturn",
+    "slug": "saturn",
+    "type": "celestial",
+    "area_sq_mi": 16490000000,
+    "ri_ratio": 13583196.05,
+    "geojson_key": "saturn"
+  },
+  {
+    "name": "Uranus",
+    "slug": "uranus",
+    "type": "celestial",
+    "area_sq_mi": 3121000000,
+    "ri_ratio": 2570840.2,
+    "geojson_key": "uranus"
+  },
+  {
+    "name": "Neptune",
+    "slug": "neptune",
+    "type": "celestial",
+    "area_sq_mi": 2941000000,
+    "ri_ratio": 2422570.02,
+    "geojson_key": "neptune"
+  },
+  {
+    "name": "Earth",
+    "slug": "earth",
+    "type": "celestial",
+    "area_sq_mi": 196900000,
+    "ri_ratio": 162191.1,
+    "geojson_key": "earth"
+  },
+  {
+    "name": "Venus",
+    "slug": "venus",
+    "type": "celestial",
+    "area_sq_mi": 177700000,
+    "ri_ratio": 146375.62,
+    "geojson_key": "venus"
+  },
+  {
+    "name": "Mars",
+    "slug": "mars",
+    "type": "celestial",
+    "area_sq_mi": 55910000,
+    "ri_ratio": 46054.37,
+    "geojson_key": "mars"
+  },
+  {
+    "name": "Mercury",
+    "slug": "mercury",
+    "type": "celestial",
+    "area_sq_mi": 28880000,
+    "ri_ratio": 23789.13,
+    "geojson_key": "mercury"
+  },
+  {
+    "name": "Moon",
+    "slug": "moon",
+    "type": "celestial",
+    "area_sq_mi": 14600000,
+    "ri_ratio": 12026.36,
+    "geojson_key": "moon"
+  },
+  {
     "name": "Russia",
     "slug": "russia",
     "type": "country",

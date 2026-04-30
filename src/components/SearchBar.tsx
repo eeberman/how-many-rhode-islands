@@ -9,6 +9,7 @@ const TYPE_LABEL: Record<Place["type"], string> = {
   us_state: "US State",
   national_park: "National Park",
   city: "City",
+  celestial: "Celestial",
 };
 
 export default function SearchBar() {

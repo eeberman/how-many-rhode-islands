@@ -1,6 +1,6 @@
 import placesData from "../../data/places.json";
 
-export type PlaceType = "country" | "us_state" | "national_park" | "city";
+export type PlaceType = "country" | "us_state" | "national_park" | "city" | "celestial";
 
 export interface Place {
   name: string;
@@ -50,10 +50,11 @@ export function searchPlaces(query: string, limit = 8): Place[] {
 
   // Sort each bucket: countries/states first, then by area desc
   const typeRank: Record<PlaceType, number> = {
-    country: 0,
-    us_state: 1,
-    national_park: 2,
-    city: 3,
+    celestial: 0,
+    country: 1,
+    us_state: 2,
+    national_park: 3,
+    city: 4,
   };
   const sortFn = (a: Place, b: Place) =>
     typeRank[a.type] - typeRank[b.type] || b.area_sq_mi - a.area_sq_mi;

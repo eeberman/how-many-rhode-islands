@@ -6,6 +6,7 @@ const SUGGESTIONS = [
   { name: "Russia", slug: "russia" },
   { name: "Texas", slug: "texas" },
   { name: "Yellowstone", slug: "yellowstone-national-park" },
+  { name: "Moon", slug: "moon" },
   { name: "Vatican City", slug: "vatican-city" },
   { name: "Luxembourg", slug: "luxembourg" },
 ];

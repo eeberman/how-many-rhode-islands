@@ -4,6 +4,7 @@ import countries from "../../data/geo/countries.json";
 import usStates from "../../data/geo/us-states.json";
 import nationalParks from "../../data/geo/national-parks.json";
 import cities from "../../data/geo/cities.json";
+import celestial from "../../data/geo/celestial.json";
 import type { Place, PlaceType } from "./places";
 import { fetchOSMBoundary } from "./osm";
 
@@ -13,6 +14,7 @@ const COUNTRIES = countries as unknown as FeatureMap;
 const US_STATES = usStates as unknown as FeatureMap;
 const NATIONAL_PARKS = nationalParks as unknown as FeatureMap;
 const CITIES = cities as unknown as FeatureMap;
+const CELESTIAL = celestial as unknown as FeatureMap;
 
 /**
  * Look up a GeoJSON feature for a place by type + key.
@@ -28,6 +30,7 @@ export function getFeature(
   if (type === "us_state") return US_STATES[geojsonKey] ?? null;
   if (type === "national_park") return NATIONAL_PARKS[geojsonKey] ?? null;
   if (type === "city") return CITIES[geojsonKey] ?? null;
+  if (type === "celestial") return CELESTIAL[geojsonKey] ?? null;
   return null;
 }
 
