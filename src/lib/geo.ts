@@ -188,8 +188,8 @@ function fitFeature(feature: Feature<Geometry, GeoJsonProperties>): Feature<Geom
   const largestLonSpan = Math.max(0.001, largest.maxLon - largest.minLon);
   const largestLatSpan = Math.max(0.001, largest.maxLat - largest.minLat);
   const hasRemoteOutliers =
-    (full.maxLon - full.minLon) / largestLonSpan > 3 ||
-    (full.maxLat - full.minLat) / largestLatSpan > 3;
+    (full.maxLon - full.minLon) / largestLonSpan > 2.75 ||
+    (full.maxLat - full.minLat) / largestLatSpan > 2.75;
 
   if (largestShare < 0.8 || !hasRemoteOutliers) return feature;
 
