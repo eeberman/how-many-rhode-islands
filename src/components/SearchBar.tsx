@@ -10,6 +10,7 @@ const TYPE_LABEL: Record<Place["type"], string> = {
   national_park: "National Park",
   city: "City",
   celestial: "Celestial",
+  currency: "Currency",
 };
 
 export default function SearchBar() {

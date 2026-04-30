@@ -1,6 +1,12 @@
 import placesData from "../../data/places.json";
 
-export type PlaceType = "country" | "us_state" | "national_park" | "city" | "celestial";
+export type PlaceType =
+  | "country"
+  | "us_state"
+  | "national_park"
+  | "city"
+  | "celestial"
+  | "currency";
 
 export interface Place {
   name: string;
@@ -55,6 +61,7 @@ export function searchPlaces(query: string, limit = 8): Place[] {
     us_state: 2,
     national_park: 3,
     city: 4,
+    currency: 5,
   };
   const sortFn = (a: Place, b: Place) =>
     typeRank[a.type] - typeRank[b.type] || b.area_sq_mi - a.area_sq_mi;
@@ -77,7 +84,19 @@ export function getRandomPlace(): Place {
  */
 export function pluralizePlaceName(name: string): string {
   const unitName = name.split(",")[0].trim();
+  if (unitName.endsWith("y") && !/[aeiou]y$/i.test(unitName)) {
+    return `${unitName.slice(0, -1)}ies`;
+  }
   return unitName.endsWith("s") ? unitName : `${unitName}s`;
+}
+
+export function formatArea(areaSqMi: number): string {
+  if (areaSqMi >= 0.001) return `${areaSqMi.toLocaleString()} sq mi`;
+
+  const areaSqIn = areaSqMi * 63360 * 63360;
+  return `${areaSqIn.toLocaleString(undefined, {
+    maximumFractionDigits: 2,
+  })} sq in`;
 }
 
 /**

@@ -3525,5 +3525,117 @@
     "area_sq_mi": 15,
     "ri_ratio": 0.01,
     "geojson_key": null
+  },
+  {
+    "name": "One Dollar Bill",
+    "slug": "one-dollar-bill",
+    "type": "currency",
+    "area_sq_mi": 3.991889778466483e-9,
+    "ri_ratio": 3.2882123381107763e-12,
+    "geojson_key": "one-dollar-bill"
+  },
+  {
+    "name": "Two Dollar Bill",
+    "slug": "two-dollar-bill",
+    "type": "currency",
+    "area_sq_mi": 3.991889778466483e-9,
+    "ri_ratio": 3.2882123381107763e-12,
+    "geojson_key": "two-dollar-bill"
+  },
+  {
+    "name": "Five Dollar Bill",
+    "slug": "five-dollar-bill",
+    "type": "currency",
+    "area_sq_mi": 3.991889778466483e-9,
+    "ri_ratio": 3.2882123381107763e-12,
+    "geojson_key": "five-dollar-bill"
+  },
+  {
+    "name": "Ten Dollar Bill",
+    "slug": "ten-dollar-bill",
+    "type": "currency",
+    "area_sq_mi": 3.991889778466483e-9,
+    "ri_ratio": 3.2882123381107763e-12,
+    "geojson_key": "ten-dollar-bill"
+  },
+  {
+    "name": "Twenty Dollar Bill",
+    "slug": "twenty-dollar-bill",
+    "type": "currency",
+    "area_sq_mi": 3.991889778466483e-9,
+    "ri_ratio": 3.2882123381107763e-12,
+    "geojson_key": "twenty-dollar-bill"
+  },
+  {
+    "name": "Fifty Dollar Bill",
+    "slug": "fifty-dollar-bill",
+    "type": "currency",
+    "area_sq_mi": 3.991889778466483e-9,
+    "ri_ratio": 3.2882123381107763e-12,
+    "geojson_key": "fifty-dollar-bill"
+  },
+  {
+    "name": "Hundred Dollar Bill",
+    "slug": "hundred-dollar-bill",
+    "type": "currency",
+    "area_sq_mi": 3.991889778466483e-9,
+    "ri_ratio": 3.2882123381107763e-12,
+    "geojson_key": "hundred-dollar-bill"
+  },
+  {
+    "name": "Regulation Check",
+    "slug": "regulation-check",
+    "type": "currency",
+    "area_sq_mi": 4.110111531986532e-9,
+    "ri_ratio": 3.385594342657769e-12,
+    "geojson_key": "regulation-check"
+  },
+  {
+    "name": "Half Dollar",
+    "slug": "half-dollar",
+    "type": "currency",
+    "area_sq_mi": 2.8407540729640446e-10,
+    "ri_ratio": 2.3399951177628046e-13,
+    "geojson_key": "half-dollar"
+  },
+  {
+    "name": "Dollar Coin",
+    "slug": "dollar-coin",
+    "type": "currency",
+    "area_sq_mi": 2.1282770458634408e-10,
+    "ri_ratio": 1.7531112404146958e-13,
+    "geojson_key": "dollar-coin"
+  },
+  {
+    "name": "Quarter",
+    "slug": "quarter",
+    "type": "currency",
+    "area_sq_mi": 1.784293475246661e-10,
+    "ri_ratio": 1.4697639829049925e-13,
+    "geojson_key": "quarter"
+  },
+  {
+    "name": "Nickel",
+    "slug": "nickel",
+    "type": "currency",
+    "area_sq_mi": 1.364056926376857e-10,
+    "ri_ratio": 1.1236053759282182e-13,
+    "geojson_key": "nickel"
+  },
+  {
+    "name": "Penny",
+    "slug": "penny",
+    "type": "currency",
+    "area_sq_mi": 1.1004797892889413e-10,
+    "ri_ratio": 9.064907654768875e-14,
+    "geojson_key": "penny"
+  },
+  {
+    "name": "Dime",
+    "slug": "dime",
+    "type": "currency",
+    "area_sq_mi": 9.723839418157084e-11,
+    "ri_ratio": 8.009752403753776e-14,
+    "geojson_key": "dime"
   }
 ]

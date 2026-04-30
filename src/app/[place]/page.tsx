@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import {
   findPlaceBySlug,
+  formatArea,
   formatRatio,
   pluralizePlaceName,
   RI_AREA_SQ_MI,
@@ -47,17 +48,17 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     : `${formatRatio(1 / place.ri_ratio)} ${pluralizePlaceName(place.name)} fit inside Rhode Island`;
   return {
     title: `${headline} — How Many Rhode Islands`,
-    description: headline,
-    openGraph: {
-      title: headline,
-      description: `${place.name} is ${place.area_sq_mi.toLocaleString()} sq mi.`,
-      type: "website",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: headline,
-      description: `${place.name} is ${place.area_sq_mi.toLocaleString()} sq mi.`,
-    },
+      description: headline,
+      openGraph: {
+        title: headline,
+        description: `${place.name} is ${formatArea(place.area_sq_mi)}.`,
+        type: "website",
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: headline,
+        description: `${place.name} is ${formatArea(place.area_sq_mi)}.`,
+      },
   };
 }
 
@@ -120,10 +121,10 @@ export default async function PlacePage({ params }: PageProps) {
         {/* Stats */}
         <div className="mt-10 text-center text-sm text-bone/50 space-y-1">
           <div>
-            {place.name}: {place.area_sq_mi.toLocaleString()} sq mi
+            {place.name}: {formatArea(place.area_sq_mi)}
           </div>
           <div>
-            Rhode Island: {RI_AREA_SQ_MI.toLocaleString()} sq mi
+            Rhode Island: {formatArea(RI_AREA_SQ_MI)}
           </div>
         </div>
 
