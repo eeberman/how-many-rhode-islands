@@ -105,10 +105,11 @@ const PARK_NAME_OVERRIDES = new Map([
 log("Fetching National Park boundaries from NPS…");
 const NPS_URL = new URL(
   "https://services1.arcgis.com/fBc8EJBxQRMcHlei/arcgis/rest/services/" +
-  "NPS_Land_Resources_Division_Boundary_and_Tract_Data_Service/FeatureServer/0/query"
+  "NPS_Land_Resources_Division_Boundary_and_Tract_Data_Service/FeatureServer/2/query"
 );
-NPS_URL.searchParams.set("where", "UNIT_TYPE IN ('National Park','National Park & Preserve','National Preserve')");
-NPS_URL.searchParams.set("outFields", "UNIT_NAME,UNIT_CODE");
+NPS_URL.searchParams.set("where", "UNIT_TYPE IN ('National Parks','National Parks & Preserves','National Preserves')");
+NPS_URL.searchParams.set("outFields", "UNIT_NAME,UNIT_CODE,UNIT_TYPE");
+NPS_URL.searchParams.set("resultRecordCount", "500");
 NPS_URL.searchParams.set("outSR", "4326");
 NPS_URL.searchParams.set("f", "geojson");
 

@@ -11,6 +11,7 @@ import { fetchPlaceFromWikidata } from "@/lib/wikidata";
 import { getFeatureAsync, getRhodeIslandFeature } from "@/lib/geo";
 import ScaleCompare from "@/components/ScaleCompare";
 import ShareButton from "@/components/ShareButton";
+import SearchBar from "@/components/SearchBar";
 
 interface PageProps {
   params: Promise<{ place: string }>;
@@ -132,6 +133,10 @@ export default async function PlacePage({ params }: PageProps) {
             ? `${ratio} Rhode Islands fit inside ${place.name}`
             : `Rhode Island is ${ratio}× bigger than ${place.name}`}
         />
+
+        <div className="mt-10 w-full">
+          <SearchBar />
+        </div>
       </div>
     </main>
   );

@@ -768,6 +768,14 @@
     "geojson_key": "300"
   },
   {
+    "name": "England",
+    "slug": "england",
+    "type": "country",
+    "area_sq_mi": 50301,
+    "ri_ratio": 41.44,
+    "geojson_key": null
+  },
+  {
     "name": "Nicaragua",
     "slug": "nicaragua",
     "type": "country",
