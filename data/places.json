@@ -1327,6 +1327,14 @@
     "geojson_key": "196"
   },
   {
+    "name": "Puerto Rico",
+    "slug": "puerto-rico",
+    "type": "country",
+    "area_sq_mi": 3515,
+    "ri_ratio": 2.9,
+    "geojson_key": "puerto-rico"
+  },
+  {
     "name": "Brunei",
     "slug": "brunei",
     "type": "country",
@@ -1455,12 +1463,28 @@
     "geojson_key": "662"
   },
   {
+    "name": "Guam",
+    "slug": "guam",
+    "type": "country",
+    "area_sq_mi": 210,
+    "ri_ratio": 0.17,
+    "geojson_key": "guam"
+  },
+  {
     "name": "Andorra",
     "slug": "andorra",
     "type": "country",
     "area_sq_mi": 181,
     "ri_ratio": 0.15,
     "geojson_key": "020"
+  },
+  {
+    "name": "Northern Mariana Islands",
+    "slug": "northern-mariana-islands",
+    "type": "country",
+    "area_sq_mi": 179,
+    "ri_ratio": 0.15,
+    "geojson_key": "northern-mariana-islands"
   },
   {
     "name": "Palau",
@@ -1519,6 +1543,14 @@
     "geojson_key": "308"
   },
   {
+    "name": "US Virgin Islands",
+    "slug": "us-virgin-islands",
+    "type": "country",
+    "area_sq_mi": 133,
+    "ri_ratio": 0.11,
+    "geojson_key": "us-virgin-islands"
+  },
+  {
     "name": "Malta",
     "slug": "malta",
     "type": "country",
@@ -1541,6 +1573,14 @@
     "area_sq_mi": 101,
     "ri_ratio": 0.08,
     "geojson_key": "659"
+  },
+  {
+    "name": "American Samoa",
+    "slug": "american-samoa",
+    "type": "country",
+    "area_sq_mi": 77,
+    "ri_ratio": 0.06,
+    "geojson_key": "american-samoa"
   },
   {
     "name": "Marshall Islands",

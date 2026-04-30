@@ -1,5 +1,5 @@
 import { ImageResponse } from "next/og";
-import { findPlaceBySlug, formatRatio, RI_AREA_SQ_MI } from "@/lib/places";
+import { findPlaceBySlug, formatRatio, pluralizePlaceName, RI_AREA_SQ_MI } from "@/lib/places";
 import { fetchPlaceFromWikidata } from "@/lib/wikidata";
 import { getFeatureAsync, getRhodeIslandFeature, projectToBox } from "@/lib/geo";
 
@@ -50,6 +50,7 @@ export default async function Image({ params }: { params: Promise<{ place: strin
   const ratio = searchedIsBigger
     ? formatRatio(place.ri_ratio)
     : formatRatio(1 / place.ri_ratio);
+  const placeUnit = pluralizePlaceName(place.name);
 
   // Same linearRatio math as ScaleCompare.tsx
   const linearRatio = Math.sqrt(
@@ -132,7 +133,7 @@ export default async function Image({ params }: { params: Promise<{ place: strin
                 {ratio}
               </span>
               <span style={{ fontSize: 32, color: BONE + "CC", marginTop: 16 }}>
-                {place.name} fit inside
+                {placeUnit} fit inside
               </span>
               <span
                 style={{

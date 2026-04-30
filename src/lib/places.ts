@@ -72,6 +72,13 @@ export function getRandomPlace(): Place {
 }
 
 /**
+ * Product-copy pluralization: small places are used as the unit.
+ */
+export function pluralizePlaceName(name: string): string {
+  return name.endsWith("s") ? name : `${name}s`;
+}
+
+/**
  * Convert a free-text query into a slug for routing.
  * Used when the user picks "Search [X] anyway" — that route
  * triggers the live Wikidata fallback in [place]/page.tsx.

@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import {
   findPlaceBySlug,
   formatRatio,
+  pluralizePlaceName,
   RI_AREA_SQ_MI,
   type Place,
 } from "@/lib/places";
@@ -43,7 +44,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const isBigger = place.ri_ratio >= 1;
   const headline = isBigger
     ? `${formatRatio(place.ri_ratio)} Rhode Islands fit inside ${place.name}`
-    : `${formatRatio(1 / place.ri_ratio)} ${place.name} fit inside Rhode Island`;
+    : `${formatRatio(1 / place.ri_ratio)} ${pluralizePlaceName(place.name)} fit inside Rhode Island`;
   return {
     title: `${headline} — How Many Rhode Islands`,
     description: headline,
@@ -72,6 +73,7 @@ export default async function PlacePage({ params }: PageProps) {
   const ratio = isBigger
     ? formatRatio(place.ri_ratio)
     : formatRatio(1 / place.ri_ratio);
+  const placeUnit = pluralizePlaceName(place.name);
 
   return (
     <main className="min-h-screen flex flex-col px-6 py-10">
@@ -103,7 +105,7 @@ export default async function PlacePage({ params }: PageProps) {
                 {ratio}
               </div>
               <div className="mt-3 font-body text-bone/80 text-lg">
-                {place.name} fit inside
+                {placeUnit} fit inside
               </div>
               <div className="mt-1 font-display text-3xl sm:text-4xl text-bone">
                 Rhode Island
@@ -128,7 +130,7 @@ export default async function PlacePage({ params }: PageProps) {
         <ShareButton
           title={isBigger
             ? `${ratio} Rhode Islands fit inside ${place.name}`
-            : `${ratio} ${place.name} fit inside Rhode Island`}
+            : `${ratio} ${placeUnit} fit inside Rhode Island`}
         />
 
         <div className="mt-10 w-full">
