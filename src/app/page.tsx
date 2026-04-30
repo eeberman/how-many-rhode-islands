@@ -44,10 +44,6 @@ export default function HomePage() {
           How does that compare?
         </p>
       </div>
-
-      <footer className="text-center pb-6 text-xs text-bone/30">
-        Rebuilt with care.
-      </footer>
     </main>
   );
 }
