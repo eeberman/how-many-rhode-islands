@@ -1335,6 +1335,14 @@
     "geojson_key": "puerto-rico"
   },
   {
+    "name": "Palestine",
+    "slug": "palestine",
+    "type": "country",
+    "area_sq_mi": 2324,
+    "ri_ratio": 1.91,
+    "geojson_key": "palestine"
+  },
+  {
     "name": "Brunei",
     "slug": "brunei",
     "type": "country",
