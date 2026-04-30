@@ -41,9 +41,7 @@ export default function HomePage() {
         </div>
 
         <p className="mt-8 text-center text-sm text-bone/40 max-w-sm">
-          Rhode Island is <span className="text-bone/70">1,214 sq mi</span> — the smallest US state.
-          <br />
-          How does that compare?
+          The only unit of measure that matters: How many Rhode Islands is it?
         </p>
       </div>
     </main>
