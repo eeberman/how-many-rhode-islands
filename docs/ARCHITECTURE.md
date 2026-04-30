@@ -18,33 +18,37 @@ Both branches share the same visual: the bigger of the two shapes fills a fixed 
 ## 2. Request flow
 
 ```
-                                               ┌──────────────────────┐
-   GET /russia                                  │ data/places.json     │
-        │                                       │ (424 entries)        │
-        ▼                                       └──────────────────────┘
-   src/app/[place]/page.tsx (SSR)                          │
-        │                                                  │ findPlaceBySlug
-        │ resolvePlace("russia")                           │
-        │      │                                           │
-        │      ├──→ static lookup (places.ts) ◀────────────┘
-        │      │       │
+                                             ┌──────────────────────┐
+   GET /russia                               │ data/places.json     │
+        │                                    │ (425 entries)        │
+        ▼                                    └──────────────────────┘
+   src/app/[place]/page.tsx (SSR)                       │
+        │                                               │ findPlaceBySlug
+        │ resolvePlace("russia")                        │
+        │      │                                        │
+        │      ├──→ static lookup (places.ts) ◀────────┘
         │      │       └──→ Place { name, area_sq_mi, ri_ratio, geojson_key }
         │      │
-        │      └──→ [Task 02] Wikidata fallback if not found
+        │      └──→ Wikidata fallback if not found in static dataset
+        │
+        │ getFeatureAsync(place)
+        │      │
+        │      ├──→ getFeature(type, geojson_key)        ← countries, states, parks, England
+        │      │       └──→ data/geo/*.json              ← bundled, O(1) lookup
+        │      │
+        │      ├──→ fetchOSMBoundary(name, "city")       ← cities only (live fetch)
+        │      │       └──→ Nominatim API → MultiPolygon
+        │      │
+        │      └──→ fetchOSMBoundary(name)               ← unkeyed countries (live fetch)
         │
         ▼
-   <ScaleCompare place={place} />  ───────┐
-        │                                  │ getFeature(type, geojson_key)
-        ▼                                  ▼
-   src/lib/geo.ts                 ┌──────────────────────┐
-        │ projectToBox()           │ data/geo/            │
-        │ (d3-geo Mercator)        │   countries.json     │
-        │                          │   us-states.json     │
-        ▼                          └──────────────────────┘
-   <svg> with two <path> elements
+   <ScaleCompare place riFeature searchedFeature />
         │
         ▼
-   HTML response
+   projectToBox(feature, INNER)                          ← d3-geo Mercator
+        └──→ SVG <path d="…"> strings
+        
+   HTML response (server-rendered)
 ```
 
 ## 3. The rendering algorithm
@@ -80,7 +84,8 @@ This is the part that's easy to mess up: if A has 100× the area of B, then B's 
 ### 3.3 Projecting the bigger shape
 
 ```ts
-const projection = geoMercator().fitSize([INNER, INNER], biggerFeature);
+const center = antimeridianCenter(biggerFeature);
+const projection = geoMercator().rotate([-center, 0]).fitSize([INNER, INNER], biggerFeature);
 const path = geoPath(projection)(biggerFeature);
 ```
 
@@ -96,34 +101,21 @@ The bigger shape is rendered at `transform="translate(PADDING, PADDING)"`, so it
 The smaller shape is also projected to fill `[INNER, INNER]` *as if* it were the only shape. Then it gets scaled down + repositioned via SVG transform.
 
 ```ts
-const projection = geoMercator().fitSize([INNER, INNER], smallerFeature);
-const path = geoPath(projection)(smallerFeature);
-
-// Transform: scale around viewBox center, no separate translate-back needed
-// because we've collapsed the math:
-//   After scale(s), a point at (INNER/2, INNER/2) is at (s*INNER/2, s*INNER/2).
-//   We want it at (INNER/2 + PADDING) = (VIEWBOX/2).
-//   ∴ tx = (INNER/2)(1 - s) + PADDING
-
 const innerTranslate = (INNER / 2) * (1 - linear_ratio) + PADDING;
 const transform = `translate(${innerTranslate} ${innerTranslate}) scale(${linear_ratio})`;
 ```
 
-**Why not `translate(viewBoxCenter) scale(s) translate(-viewBoxCenter) translate(PADDING)`?**
+**Derivation:** After `scale(s)`, a point at `(INNER/2, INNER/2)` moves to `(s·INNER/2, s·INNER/2)`. We want it at `(INNER/2 + PADDING) = VIEWBOX/2`. So `tx = (INNER/2)(1 - s) + PADDING`.
 
-Because that's four operations and the math is fragile. The collapsed form is one translate + one scale, derived once. If you find yourself "fixing the centering," check the derivation above first; the math is correct.
+**Why not re-project at smaller size:** SVG transforms are more reliable than micro-projection at very small sizes; `vector-effect="non-scaling-stroke"` only works via transforms.
 
 ### 3.5 `vector-effect="non-scaling-stroke"`
 
-When `scale(0.0136)` (Russia case) is applied, *strokes* would also scale to ~0.027px and disappear. We don't want that — we want the inner shape to remain visibly outlined.
-
-Setting `vector-effect="non-scaling-stroke"` on the inner `<path>` keeps the stroke at its declared width regardless of transform.
+When `scale(0.0136)` (Russia case) is applied, strokes also scale to ~0.027px and disappear. Setting `vector-effect="non-scaling-stroke"` on the inner `<path>` keeps the stroke at its declared width regardless of transform.
 
 ### 3.6 Sub-pixel safety net
 
-When `linear_ratio < 4 / INNER` (i.e. the inner shape is smaller than 4 pixels), even a non-scaling stroke can be hard to see. We render a small `<circle>` at viewBox center as a guaranteed-visible marker. Currently triggers at `INNER * linear_ratio < 4` — Russia's ratio (0.0136 → 4.9px) is just above this threshold.
-
-If you change `INNER` or want the fallback to kick in for more cases, edit the threshold in `ScaleCompare.tsx`.
+When `INNER * linear_ratio < 4` (inner shape smaller than 4 pixels), render a small `<circle>` at viewBox center as a guaranteed-visible marker. Russia's ratio (0.0136 → 4.9px) is just above this threshold.
 
 ### 3.7 The flip (smaller-than-RI case)
 
@@ -133,13 +125,42 @@ When `place.area_sq_mi < RI_AREA_SQ_MI`:
 - Inner shape: white-stroked outline of the searched place.
 - Headline: *"Rhode Island is X× bigger than [place]"*.
 
-The math is symmetric — only the colors and the headline change.
+The math is symmetric — only the colors and headline change.
 
-## 4. Data layer
+## 4. Antimeridian handling
 
-### 4.1 `data/places.json`
+Features crossing the ±180° longitude line (Russia, Alaska, Fiji, Kiribati, New Zealand) render split across the viewbox without correction.
 
-The static dataset. 424 entries, four types: `country`, `us_state`, `national_park`, `city`.
+**Fix:** Detect antimeridian-crossing features by checking `max_lon - min_lon > 180°`. Unwrap negative longitudes (+360°) to make the range contiguous, compute the midpoint, and rotate the Mercator projection so the feature is centered away from the clip boundary.
+
+```typescript
+// geo.ts
+function antimeridianCenter(feature): number {
+  // Returns center longitude to rotate to (0 = no crossing, no rotation)
+  const lons = collectLongitudes(feature.geometry);
+  const min = Math.min(...lons), max = Math.max(...lons);
+  if (max - min <= 180) return 0;
+  // Unwrap negatives, find midpoint
+  const unwrapped = lons.map(l => l < 0 ? l + 360 : l);
+  const uMin = Math.min(...unwrapped), uMax = Math.max(...unwrapped);
+  const center = (uMin + uMax) / 2;
+  return center > 180 ? center - 360 : center;
+}
+
+// In projectToBox:
+const center = antimeridianCenter(feature);
+geoMercator().rotate([-center, 0]).fitSize([INNER, INNER], feature)
+//                   ↑ NEGATIVE of center — d3-geo adds λ to each longitude,
+//                   so rotate([-c, 0]) centers the feature at longitude c.
+```
+
+**Sign convention (critical):** `geoMercator().rotate([λ, 0])` maps each geographic longitude as `lon + λ`. To center on longitude `c`, set `λ = -c`. Getting this wrong (using `+center`) clips the feature at the wrong meridian and splits it.
+
+## 5. Data layer
+
+### 5.1 `data/places.json`
+
+The static dataset. 425 entries, four types: `country`, `us_state`, `national_park`, `city`.
 
 ```json
 {
@@ -152,65 +173,104 @@ The static dataset. 424 entries, four types: `country`, `us_state`, `national_pa
 }
 ```
 
-`geojson_key` is `null` for entries without bundled boundary data (parks, cities, Tuvalu).
+`geojson_key` is `null` for entries without bundled boundary data (cities, Tuvalu). `"england"` is a synthetic key for the manually bundled England polygon.
 
-### 4.2 `data/geo/countries.json`
+### 5.2 `data/geo/countries.json`
 
-Map: `ISO numeric code → GeoJSON Feature`. 196 entries. ~1.5MB after coordinate quantization to 3 decimals.
+Map: `key → GeoJSON Feature`. Keys are ISO numeric codes for sovereign countries (e.g. "643" = Russia) plus the synthetic key `"england"` for England's separately bundled polygon. ~200 entries, ~2MB after quantization.
 
-### 4.3 `data/geo/us-states.json`
+England is in this file because it is a constituent country of the UK — not present in `world-atlas` (which only has sovereign states). Its boundary was fetched from Nominatim locally and bundled.
+
+### 5.3 `data/geo/us-states.json`
 
 Map: `FIPS code → GeoJSON Feature`. 50 entries. ~245KB.
 
-### 4.4 The build script
+### 5.4 `data/geo/national-parks.json`
 
-`scripts/build-geo.mjs` is the only thing that writes to `data/geo/` and the only thing that updates `geojson_key` in `data/places.json`. Run via `npm run build:geo` whenever you add new entries to `places.json` or want fresh boundary data.
+Map: `NPS unit code → GeoJSON Feature`. ~61 entries. Generated from NPS ArcGIS `FeatureServer/2` (polygon layer — not layer 0, which is centroids).
 
-## 5. File responsibility map
+### 5.5 The build script
+
+`scripts/build-geo.mjs` is the only thing that writes to `data/geo/` (except the manual England addition) and updates `geojson_key` in `data/places.json`. Run via `npm run build:geo`.
+
+**Note:** `build-geo.mjs` does NOT handle cities (live fetch at runtime) or constituent countries like England (manually bundled). It also does not know about the `"england"` entry in `countries.json` — if you run `build:geo` again, it will overwrite `countries.json` WITHOUT England. Re-add England after any `build:geo` run:
+
+```bash
+npm run build:geo
+node -e "
+const fs = require('fs');
+const countries = JSON.parse(fs.readFileSync('data/geo/countries.json', 'utf8'));
+// ... re-fetch and re-add England if missing
+"
+```
+
+The better long-term fix is to have `build:geo` know about synthetic entries and preserve them. See DECISIONS D-023.
+
+## 6. Feature resolution chain
+
+`getFeatureAsync(place)` in `geo.ts` resolves features in this order:
+
+```
+place.geojson_key is set?
+  └─ YES → look up in bundled data (countries / states / parks)
+  └─ NO  → place.type === "city"?
+              └─ YES → fetchOSMBoundary(place.name, "city")
+              └─ NO  → place.type === "country"?
+                          └─ YES → fetchOSMBoundary(place.name)   [no featuretype filter]
+                          └─ NO  → return null → placeholder rectangle
+```
+
+The `featuretype` param distinction matters: `featuretype=city` filters Nominatim results to city-class features. Constituent countries like England (before it was bundled) were not classified as `featuretype=city` in Nominatim — omitting the filter lets Nominatim return the best match by importance.
+
+## 7. File responsibility map
 
 | File | Responsibility | Should NOT |
 |---|---|---|
 | `places.ts` | Static dataset access. Search. Slug normalization. Ratio formatting. | Know about GeoJSON. |
-| `geo.ts` | GeoJSON lookup. d3-geo projection. | Know about Place metadata beyond `type` + `geojson_key`. |
-| `places.json` | Hold the curated dataset. | Be hand-edited for `geojson_key` (let `build-geo` do that). |
-| `[place]/page.tsx` | Resolve slug → Place. SSR the page. Generate metadata. | Render shapes (delegates to `ScaleCompare`). |
+| `geo.ts` | GeoJSON lookup. d3-geo projection. Antimeridian detection. | Know about Place metadata beyond `type` + `geojson_key`. |
+| `osm.ts` | Nominatim HTTP fetch. Quantize. | Cache to disk (let Next.js handle HTTP caching). |
+| `places.json` | Hold the curated dataset. | Be hand-edited for `geojson_key` (let `build-geo` do that, except for manual entries). |
+| `[place]/page.tsx` | Resolve slug → Place. Fetch features. SSR the page. Generate metadata. | Render shapes (delegates to `ScaleCompare`). |
 | `ScaleCompare.tsx` | Compute linear_ratio. Render the SVG. | Know about lookup, caching, or fallback chains. |
 | `SearchBar.tsx` | Autocomplete UX. Escape hatch. | Know about result rendering. |
 | `build-geo.mjs` | One-time GeoJSON construction. | Be in the runtime path. |
 
-If a future change crosses these lines (e.g. "ScaleCompare needs to know if a place is a city"), reconsider — usually the right move is to push the decision *up* to the page or down to a new dedicated module.
+## 8. Known visual issues
 
-## 6. The hybrid lookup strategy
+### 8.1 Outlying islands (France, Chile)
 
-Coverage by tier:
+Countries with small islands far from the mainland render with the mainland shrunken into the viewbox. `fitSize` must fit the entire feature's geographic bounding box — if France's bounding box must include Réunion (Indian Ocean), metropolitan France occupies a tiny fraction.
 
-| Tier | Source | Latency | Coverage | Cost |
-|---|---|---|---|---|
-| 1. Static | `data/places.json` | ~0ms | 424 curated places | Free, bundled |
-| 2. Long-tail (Task 02) | Wikidata SPARQL | ~500ms-2s first time, ~0ms cached | Most named entities on Earth | Free, KV-cached |
-| 3. City geometry (Task 03) | OSM Nominatim | ~500ms-1s first time, ~0ms cached | Most major cities | Free, KV-cached, rate-limited |
+**Archipelago countries (Greece, Indonesia, Philippines) are fine** because all islands are geographically close; the bounding box is tight.
 
-The page uses tier 1 for everything in the static dataset. For unknown slugs, it falls through to tier 2 (Wikidata) for area data and stays at the placeholder rectangle for the visual. Tier 3 upgrades the visual for city entries (which are in tier 1 for area but lack bundled geometry).
+**Proposed fix:** In `projectToBox`, use the largest sub-polygon's bounds for `fitSize`, but still render the whole feature. See HANDOFF Issue 2 for the code sketch.
 
-## 7. Constraints (which shaped many decisions)
+**Affected countries in dataset:** France, Chile, USA (Hawaii — but world-atlas contiguous-US boundary excludes Hawaii by default), Norway (Svalbard), Portugal (Azores), Spain (Canary Islands).
 
-- **Free Vercel only**: no paid services. KV free tier is generous (30,000 reqs/month, 256MB storage).
+### 8.2 City outlines on Vercel
+
+Live Nominatim fetches for city boundaries (`cache: "no-store"`) may fail if Vercel's function IPs are blocked or throttled by Nominatim. Cities fall back to placeholder rectangles. See HANDOFF Issue 1 for diagnosis steps.
+
+## 9. Constraints (which shaped many decisions)
+
+- **Free Vercel only**: no paid services.
 - **Mobile-first**: phones are primary. The viewBox + layout are sized for ~375px wide screens.
-- **No login, no analytics beyond Vercel's free**: keep the surface area small.
 - **Shareable URLs**: the entire reason this exists is so the project owner's mom can send him a link.
 - **SSR over CSR**: search engines and link unfurlers (iMessage, Twitter) need server-rendered HTML to scrape OG tags.
 
-## 8. Where to extend (and where not to)
+## 10. Where to extend (and where not to)
 
-**Easy to extend:**
+**Easy:**
 - New static entries → edit `places.json`, run `build:geo`.
 - New visual style → edit `ScaleCompare.tsx`. Math is stable; only paint changes.
 - New autocomplete behavior → edit `searchPlaces()` in `places.ts`.
 
 **Harder:**
-- New boundary source → edit `build-geo.mjs` *and* `geo.ts` *and* `ScaleCompare.tsx` (just to know the new place type can have real geometry).
-- New entry type → touch every file in the responsibility map. Avoid unless necessary.
+- Fix outlying-island projection → edit `projectToBox` in `geo.ts`. (See §8.1 for approach.)
+- Fix city boundary reliability → edit `osm.ts` fetch strategy or switch data source.
+- New bundled boundary category → edit `build-geo.mjs` + `geo.ts`.
 
 **Off-limits without re-reading this doc:**
-- The math in `ScaleCompare.tsx`. It's correct. If something looks "off-center," 99% of the time it's a CSS issue, not a math issue.
-- The viewBox dimensions. Many things are derived from `VIEWBOX=400, PADDING=20`. Changing these means recomputing transform formulas.
+- The math in `ScaleCompare.tsx`. It is correct.
+- The antimeridian sign in `rotate([-center, 0])`. Using `+center` splits Russia.
+- The viewBox dimensions. `VIEWBOX=400, PADDING=20` are baked into transform derivations.

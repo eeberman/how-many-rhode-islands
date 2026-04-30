@@ -242,6 +242,77 @@ Every meaningful design choice and the alternatives considered. If you're tempte
 
 ---
 
+---
+
+### D-023: England bundled in countries.json with synthetic key, not fetched at runtime
+
+**Choice:** Fetch England's boundary polygon from Nominatim once (locally), quantize it, and store it in `data/geo/countries.json` under the synthetic key `"england"`. Set `geojson_key: "england"` in `places.json`. England now resolves from bundled data with no live network dependency.
+
+**Why England needs special handling:** England is a constituent country of the United Kingdom, not a sovereign state. It is absent from `world-atlas` (which only covers sovereign nations at ISO 3166-1 level). It cannot be matched by the normal `build-geo.mjs` country-lookup path.
+
+**Alternatives:**
+- Live OSM fetch at render time: unreliable from Vercel datacenter IPs (same root cause as the cities issue).
+- Add a `gb-regions.json` file for constituent UK countries (England, Scotland, Wales, Northern Ireland): more organized but over-engineering for a single entry.
+- Use a UK-specific GeoJSON dataset: another dependency to manage.
+
+**Tradeoff accepted:** `build-geo.mjs` does not know about the `"england"` entry. Running `npm run build:geo` overwrites `countries.json` and loses the England polygon. Whoever runs `build:geo` must re-add England afterward. The long-term fix is to make `build:geo` preserve synthetic entries.
+
+---
+
+### D-024: Antimeridian rotation uses rotate([-center, 0]), not rotate([center, 0])
+
+**Choice:** In `projectToBox`, apply `geoMercator().rotate([-center, 0])` where `center` is the longitude computed by `antimeridianCenter`.
+
+**The sign convention:** `geoMercator().rotate([λ, 0])` adds `λ` to each geographic longitude before projecting. To center the feature at longitude `c`, we need `lon + λ = 0` when `lon = c`, so `λ = -c`. Using `+center` rotates the wrong direction and clips the feature at the wrong meridian (Russia splits at the Urals with `rotate([105, 0])`; it consolidates correctly with `rotate([-105, 0])`).
+
+**Alternatives:** None considered — this is a correctness fix, not a design choice.
+
+**Tradeoff accepted:** None. The sign derivation is documented here and in the code to prevent future "fixes" that re-introduce the wrong sign.
+
+---
+
+### D-025: NPS FeatureServer layer 2 (polygons), not layer 0 (centroids)
+
+**Choice:** The NPS ArcGIS service has multiple layers. Layer 0 (`nps_boundary_centroids`) returns Point geometries. Layer 2 (`nps_boundary`) returns Polygon/MultiPolygon geometries. `build-geo.mjs` queries layer 2.
+
+**Why this matters:** The original script queried layer 0, which returned centroid Points. Our geometry type check (`type !== 'Polygon' && type !== 'MultiPolygon'`) correctly rejected them, resulting in null geojson_key for all parks → placeholder rectangles.
+
+**Tradeoff accepted:** Layer 2's `UNIT_TYPE` values use plural form (`'National Parks'`, not `'National Park'`). The WHERE clause must match exactly — a detail easy to regress if the query is edited.
+
+---
+
+### D-026: City OSM fetch uses cache:"no-store" (not next:{revalidate})
+
+**Choice:** `fetchOSMBoundary` in `osm.ts` uses `cache: "no-store"`. Each page render makes a fresh request to Nominatim.
+
+**History:**
+- Original code had `signal: AbortSignal.timeout(TIMEOUT_MS)` combined with `next: { revalidate: N }`. In Next.js 15, these two options conflict — the fetch throws immediately and the catch block returns null. All OSM fetches silently failed.
+- After removing `AbortSignal.timeout`, switched to `next: { revalidate: 2592000 }` (30 days). Suspected issue: the Next.js Data Cache on Vercel persists across deployments and may have cached failed responses from the broken era.
+- Switched to `cache: "no-store"` to bypass the Data Cache entirely.
+
+**Alternatives:**
+- `next: { revalidate: 86400 }` (24h): better for production performance; re-try once DataCache-poisoning is confirmed cleared.
+- Vercel KV for explicit caching: more control, more wiring.
+- `cache: "force-cache"`: depends on Nominatim sending proper HTTP Cache-Control headers (it does not reliably).
+
+**Tradeoff accepted:** Every city page render makes a live Nominatim HTTP request. Slower than cached (~500ms added latency on cold render). Acceptable for a side project with low traffic. If/when city boundaries are confirmed working, switch back to a caching strategy.
+
+---
+
+### D-027: Countries with remote outlying islands are a known visual defect (not yet fixed)
+
+**Choice:** No fix implemented yet. France (`/france`) and Chile (`/chile`) currently render with the mainland occupying a small portion of the viewbox because `fitSize` must encompass the entire feature's geographic bounds, including distant overseas territories.
+
+**Why archipelago countries work fine:** Greece (Aegean), Indonesia, Philippines, Japan — all islands are geographically close to the main landmass. The bounding box is tight and the mainland fills the frame.
+
+**Why France/Chile break:** France's bounding box must include Réunion (56°E, Indian Ocean), French Guiana (−54°W), and New Caledonia (166°E, Pacific) alongside metropolitan France (−5° to 8°E). The resulting viewbox is mostly ocean.
+
+**Proposed fix:** In `projectToBox`, detect MultiPolygon features, identify the dominant sub-polygon by bounding-box area, use only that polygon for `fitSize`, and still render all polygons using the resulting projection. Distant islands render off-screen. See ARCHITECTURE §8.1 and HANDOFF Issue 2 for the code sketch.
+
+**Tradeoff accepted (current state):** France and Chile show visually wrong results. Acceptable for v1 — these are known, documented, and fixable without architectural changes.
+
+---
+
 When you make a meaningful decision while implementing a task, append it here. Format:
 
 ```
