@@ -75,7 +75,8 @@ export function getRandomPlace(): Place {
  * Product-copy pluralization: small places are used as the unit.
  */
 export function pluralizePlaceName(name: string): string {
-  return name.endsWith("s") ? name : `${name}s`;
+  const unitName = name.split(",")[0].trim();
+  return unitName.endsWith("s") ? unitName : `${unitName}s`;
 }
 
 /**
