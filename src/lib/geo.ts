@@ -118,7 +118,7 @@ export function projectToBox(
   const center = antimeridianCenter(feature);
   // rotate([center, 0]) makes d3-geo project lon as (lon - center),
   // centering the feature at 0° and keeping it away from the ±180° clip boundary.
-  const projection = geoMercator().rotate([center, 0]).fitSize([boxSize, boxSize], feature);
+  const projection = geoMercator().rotate([-center, 0]).fitSize([boxSize, boxSize], feature);
   const path = geoPath(projection);
   return path(feature) ?? "";
 }

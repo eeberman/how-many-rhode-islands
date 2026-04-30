@@ -1,7 +1,6 @@
 import type { Feature, Polygon, MultiPolygon } from "geojson";
 
 const UA = "HowManyRhodeIslands/0.1 (https://github.com/eliaseberman/how-many-rhode-islands)";
-const TIMEOUT_MS = 8000;
 const CACHE_TTL_SEC = 60 * 60 * 24 * 30; // 30 days — cities don't move
 
 function quantize(geom: Polygon | MultiPolygon): Polygon | MultiPolygon {
@@ -40,7 +39,6 @@ export async function fetchOSMBoundary(
 
     const res = await fetch(url.toString(), {
       headers: { "User-Agent": UA, Accept: "application/json" },
-      signal: AbortSignal.timeout(TIMEOUT_MS),
       next: { revalidate: CACHE_TTL_SEC },
     });
     if (!res.ok) return null;
