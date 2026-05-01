@@ -21,9 +21,6 @@ export default function HomePage() {
             <br />
             <span className="text-ocean-bright italic">Rhode Islands</span>
           </h1>
-          <p className="mt-4 text-bone/60 text-base">
-            fit inside that?
-          </p>
         </div>
 
         <SearchBar />
