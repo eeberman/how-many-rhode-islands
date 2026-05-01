@@ -36,6 +36,14 @@ async function resolvePlace(slug: string): Promise<Place | null> {
   return await fetchPlaceFromWikidata(slug);
 }
 
+function ratioTextClass(ratio: string): string {
+  const digits = ratio.replace(/[^0-9]/g, "").length;
+  if (digits >= 13) return "text-[2.6rem] sm:text-6xl";
+  if (digits >= 10) return "text-5xl sm:text-7xl";
+  if (digits >= 7) return "text-6xl sm:text-8xl";
+  return "text-7xl sm:text-8xl";
+}
+
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { place: slug } = await params;
   const place = await resolvePlace(slug);
@@ -75,6 +83,7 @@ export default async function PlacePage({ params }: PageProps) {
     ? formatRatio(place.ri_ratio)
     : formatRatio(1 / place.ri_ratio);
   const placeUnit = pluralizePlaceName(place.name);
+  const ratioClass = `font-display ${ratioTextClass(ratio)} font-bold text-ocean-bright leading-none tracking-tight max-w-full break-normal`;
 
   return (
     <main className="min-h-screen flex flex-col px-6 py-10">
@@ -90,7 +99,7 @@ export default async function PlacePage({ params }: PageProps) {
         <div className="text-center mb-8">
           {isBigger ? (
             <>
-              <div className="font-display text-7xl sm:text-8xl font-bold text-ocean-bright leading-none tracking-tight">
+              <div className={ratioClass}>
                 {ratio}
               </div>
               <div className="mt-3 font-body text-bone/80 text-lg">
@@ -102,7 +111,7 @@ export default async function PlacePage({ params }: PageProps) {
             </>
           ) : (
             <>
-              <div className="font-display text-7xl sm:text-8xl font-bold text-ocean-bright leading-none tracking-tight">
+              <div className={ratioClass}>
                 {ratio}
               </div>
               <div className="mt-3 font-body text-bone/80 text-lg">
