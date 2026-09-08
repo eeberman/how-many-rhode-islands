@@ -15,6 +15,10 @@ npm run dev
 
 ## Status
 
+**Live site:** [how-many-rhode-islands.vercel.app](https://how-many-rhode-islands.vercel.app/)
+
+
+
 **Live at Vercel.** All five original tasks are complete and deployed.
 
 - Countries, US states, national parks: real outlines from bundled GeoJSON
